@@ -1,13 +1,14 @@
 import concurrent.futures as cf
-import shutil, os
 from requests_html import HTMLSession
 import time
 import datetime
-
+from helper_methods import connector as con
+import sys, os
+from threading import Lock
+insert_room_lock = Lock()
+THREADS = 25
+con.make_connection()
 session = HTMLSession()
-# Find all subjects' links
-resp = session.get("http://web.csulb.edu/depts/enrollment/registration/class_schedule/Fall_2019/By_Subject/").html
-subjects = [subject.find('a', first=True).links for subject in resp.find("#pageContent li")]
 
 
 def parse_time(text):
@@ -57,14 +58,22 @@ def parse_interval(text):
 
 
 def parse_build_room(br):
-    if "-" in br:
-        return br.split("-")
-    else:
-        return [br, br]
+    try:
+        if br in con.rooms.keys():
+            return con.rooms[br]
+        if "-" in br:
+            temp_room = br.split("-")[:2]
+        else:
+            temp_room = [br, br]
+        with insert_room_lock:
+            room_id = con.inset_room(temp_room)
+            con.rooms["-".join(temp_room)] = room_id
+            return room_id
+    except Exception as e:
+        print(f"Error in parse building: {e}, br: {br=}")
 
 
 def subject_parser(subject):
-    subject = list(subject)[0]
     subject_url = f"http://web.csulb.edu/depts/enrollment/registration/class_schedule/Fall_2018/By_Subject/{subject}"
     query = ""
     empty = True
@@ -79,20 +88,35 @@ def subject_parser(subject):
                 class_info = [x.text for x in course_row.find("td")]
                 class_info = [x.replace("'", "''") for x in class_info]
                 start_time, end_time = parse_interval(class_info[6])
-                building, room = parse_build_room(class_info[8])
-                query += f"( '{class_info[0]}', '{class_info[5]}', '{start_time}', '{end_time}', '{class_info[10]}', '{class_info[9]}', '{room_id}', '{class_info[4]}', '{title}'),"
-                # query += f"( '{class_info[0]}', '{class_info[5]}', '{start_time}', '{end_time}', '{class_info[10]}', '{class_info[9]}', '{building}', '{room}', '{class_info[4]}', '{title}'),"
+                room_id = parse_build_room(class_info[8])
+                query += f"( '{class_info[0]}', '{class_info[5]}', '{start_time}', '{end_time}', '{class_info[10]}', '{class_info[9]}', NULL, '{room_id}', '{class_info[4]}', '{title}'),"
                 empty = False
         if not empty:
-            with open(f"sql_queries/{subject.split('.')[0]}.sql", "w") as f :
+            with open(f"sql_queries/{subject.split('.')[0]}.sql", "w") as f:
                 f.write(query)
-
     except Exception as e:
-        print(f"Error: {e}")
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
+        print(f"Error: {e}\nError subject: {subject}, room_id: {room_id}")
+
+
+def main():
+    try:
+        con.make_connection()
+        # Find all subjects' links
+        resp = session.get(
+            "http://web.csulb.edu/depts/enrollment/registration/class_schedule/Fall_2019/By_Subject/").html
+        subjects = [list(subject.find('a', first=True).links)[0] for subject in resp.find("#pageContent li")]
+        start = time.time()
+        with cf.ThreadPoolExecutor(THREADS) as ex:
+            ex.map(subject_parser, sorted(subjects[:]))
+        con.insert_courses_info()
+        con.close_conn()
+        print(f"Time of execution: {time.time() - start}")
+    except Exception as e:
+        print(f"Main Error: {e}")
 
 
 if __name__ == '__main__':
-    start = time.time()
-    with cf.ProcessPoolExecutor() as ex:
-        ex.map(subject_parser, sorted(subjects[:]))
-    print(f"Time of execution: {time.time() - start}")
+    main()

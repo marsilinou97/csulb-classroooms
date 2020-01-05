@@ -2,10 +2,139 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../django/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/csulb/schedule/templates/final/test_files/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../django/csulb/schedule/templates/final/test_files/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/csulb/schedule/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/csulb/schedule/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/csulb/schedule/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/csulb/schedule/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/DAO.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/classrooms_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/classrooms_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/connector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/dao_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/helper_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/db_executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/db_executor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/scraper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/scraper_temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/courses_info_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AAAS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ACCT.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AFRS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AH.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AIS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AMST.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ANTH.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ARAB.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ART.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ASAM.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ASLD.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ASTR.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ATEP.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ATHL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AxST.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/BIOL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/BLAW.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/BME.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CAFF.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CBA.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CDFS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CECS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CEM.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHEM.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHIN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHLS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHzE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CLSC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/COMM.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/COUN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CRJU.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CWL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CxLA.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CzE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/DANC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/DESN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/DPT.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ECON.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDAD.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDCI.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDEC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDEL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDLD.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDSE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDSP.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDSS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDzP.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ENGL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ENGR.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EOP.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ESzP.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ETEC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EzE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EzT.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FCS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FEA.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FIL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FIN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FMD.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FREN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FSCI.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GBA.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GEOG.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GEOL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GERM.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GERN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GK.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HCA.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HDEV.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HEBW.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HIST.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HRM.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HzSC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ITAL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/IxST.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/IzS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/JAPN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/JOUR.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/KHMR.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/KIN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/KOR.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/LAT.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/LING.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/LxST.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MAE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MATH.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MGMT.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MKTG.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MTED.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MUS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MzS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/NRSG.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/NSCI.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/NUTR.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PHIL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PHSC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PHYS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/POSC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PPA.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PSY.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/REC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RGR.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RSCH.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RUSS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RxST.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SCAE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SCED.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SCM.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SDHE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SOC.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SPAN.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SRL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/STAT.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SxI.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SzW.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/THEA.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/UDCP.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/UHP.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/UNIV.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/VIET.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/WGSS.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +224,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../django" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1VeGy3xgm8GvezZboYAovtLJaGY" />
@@ -108,6 +237,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/utilities" />
@@ -134,7 +264,7 @@
       <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\web_app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.db_executor (1)">
+  <component name="RunManager" selected="Python.classrooms_scraper">
     <configuration name="classrooms_scraper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="project_redo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,28 +309,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dao_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="project_redo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities/database_building" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/dao_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="db_executor (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="project_redo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -223,6 +331,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="helper_methods" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_redo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities/database_building" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/helper_methods.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scraper_temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="project_redo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,7 +366,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/scraper_temp.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\marsi\Dropbox\csulbClasses\project_redo\utilities\database_building\courses_info_scraper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -247,11 +377,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.classrooms_scraper" />
+        <item itemvalue="Python.helper_methods" />
         <item itemvalue="Python.db_executor (1)" />
         <item itemvalue="Python.scraper_temp" />
-        <item itemvalue="Python.classrooms_scraper" />
         <item itemvalue="Python.connector" />
-        <item itemvalue="Python.dao_test" />
       </list>
     </recent_temporary>
   </component>
@@ -260,17 +390,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@ec588b" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -307,7 +427,8 @@
       <workItem from="1578130619374" duration="6668000" />
       <workItem from="1578168816307" duration="1034000" />
       <workItem from="1578175069788" duration="5972000" />
-      <workItem from="1578197437372" duration="5628000" />
+      <workItem from="1578197437372" duration="7418000" />
+      <workItem from="1578218295953" duration="921000" />
     </task>
     <servers />
   </component>
@@ -327,6 +448,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="872" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578021637750" />
+    <state x="862" y="110" key="CommitChangelistDialog2" timestamp="1578217088980">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="862" y="110" key="CommitChangelistDialog2/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578217088980" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1577611063697">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -339,22 +464,38 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578021766535" />
-    <state width="1792" height="255" key="GridCell.Tab.0.bottom" timestamp="1578215916380">
+    <state width="1257" height="281" key="GridCell.Tab.0.bottom" timestamp="1578219192584">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1792" height="255" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
-    <state width="1792" height="255" key="GridCell.Tab.0.center" timestamp="1578215916380">
+    <state width="1257" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
+    <state width="1257" height="281" key="GridCell.Tab.0.center" timestamp="1578219192584">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1792" height="255" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
-    <state width="1792" height="255" key="GridCell.Tab.0.left" timestamp="1578215916380">
+    <state width="1257" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
+    <state width="1257" height="281" key="GridCell.Tab.0.left" timestamp="1578219192584">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1792" height="255" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
-    <state width="1792" height="255" key="GridCell.Tab.0.right" timestamp="1578215916380">
+    <state width="1257" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
+    <state width="1257" height="281" key="GridCell.Tab.0.right" timestamp="1578219192584">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1792" height="255" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
+    <state width="1257" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
+    <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1578219150236">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
+    <state width="1258" height="348" key="GridCell.Tab.1.center" timestamp="1578219150236">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
+    <state width="1258" height="348" key="GridCell.Tab.1.left" timestamp="1578219150236">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
+    <state width="1258" height="348" key="GridCell.Tab.1.right" timestamp="1578219150236">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1258" height="348" key="GridCell.Tab.1.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
     <state x="781" y="161" key="SettingsEditor" timestamp="1578044281608">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -371,10 +512,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215706029" />
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578197532327">
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578218296276">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578197532327" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578218296276" />
     <state x="887" y="67" width="785" height="906" key="find.popup" timestamp="1577669620934">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -388,9 +529,10 @@
     <SUITE FILE_PATH="coverage/project_redo$connector.coverage" NAME="connector Coverage Results" MODIFIED="1578135228527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$db_executor.coverage" NAME="db_executor Coverage Results" MODIFIED="1574043974577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_redo$dad.coverage" NAME="dad Coverage Results" MODIFIED="1578047325356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
-    <SUITE FILE_PATH="coverage/project_redo$db_executor__1_.coverage" NAME="db_executor (1) Coverage Results" MODIFIED="1578215875377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$db_executor__1_.coverage" NAME="db_executor (1) Coverage Results" MODIFIED="1578218877293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1577672252168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/project_redo$classrooms_scraper.coverage" NAME="classrooms_scraper Coverage Results" MODIFIED="1578215377359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$helper_methods.coverage" NAME="helper_methods Coverage Results" MODIFIED="1578219187113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$classrooms_scraper.coverage" NAME="classrooms_scraper Coverage Results" MODIFIED="1578219192579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$dao_test.coverage" NAME="dao_test Coverage Results" MODIFIED="1578127734220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$scraper_temp.coverage" NAME="scraper_temp Coverage Results" MODIFIED="1578215822648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
   </component>

@@ -1,1 +1,0 @@
-( '5945', 'MW', '14:00:00', '15:50:00', '', 'Daulo I', 'PSY', '152', 'SEM', 'FUNDAMENTALS OF FILIPINO'),

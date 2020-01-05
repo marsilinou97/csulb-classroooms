@@ -1,29 +1,11 @@
 import psycopg2
 from threading import Lock
-
-
-class Singleton:
-    __instance = None
-
-    @staticmethod
-    def getInstance():
-        """ Static access method. """
-        if Singleton.__instance == None:
-            Singleton()
-        return Singleton.__instance
-
-    def __init__(self):
-        """ Virtually private constructor. """
-        if Singleton.__instance != None:
-            raise Exception("This class is a singleton!")
-        else:
-            Singleton.__instance = self
-
+import os
 
 class connector:
     con = False
     insert_lock = Lock()
-    rooms = dict()
+    rooms = None
     cursor = None
 
     @staticmethod
@@ -32,30 +14,32 @@ class connector:
             print("Making connection...")
             try:
                 connector.connection = psycopg2.connect(user="rikwjbvg",
-                                                        password="PTmEK_y0-uyC3kRIbWwLlihyUQZYUtA-",
+                                                        password=os.environ.get("DB_PASSWORD"),
                                                         host="salt.db.elephantsql.com",
                                                         port="5432",
                                                         database="rikwjbvg")
-
                 connector.cursor = connector.connection.cursor()
                 connector.con = True
-                connector.rooms = connector.__get_all_rooms()
             except Exception as e:
                 print(e)
 
     @staticmethod
     def __get_all_rooms():
         print("Getting all rooms")
+        if not connector.cursor:
+            connector.make_connection()
         connector.cursor.execute(f'''
                            SELECT ID, BUILDING, ROOM_NUM
                             FROM RIKWJBVG.PUBLIC.MAIN_APP_CLASSROOMS
                             ORDER BY ID
                             ''')
-        rooms = {f"{building}-{room}": room_id for room_id, building, room in connector.cursor.fetchall()}
-        return rooms
+        connector.rooms = {f"{building}-{room}": room_id for room_id, building, room in connector.cursor.fetchall()}
+        return connector.rooms
 
     @staticmethod
     def get_rooms():
+        if not connector.rooms:
+            connector.__get_all_rooms()
         return connector.rooms
 
     @staticmethod
@@ -74,6 +58,29 @@ class connector:
             connector.rooms["-".join(room)] = res
             print(f"Room inserted correctly")
             return res[0]
+
+    @staticmethod
+    def insert_courses_info():
+        try:
+            if not connector.cursor:
+                connector.make_connection()
+            query = "INSERT INTO MAIN_APP_CLASSESINFO (class_number, class_days, start_time, end_time, class_comments, instructor, building, room_num, class_type, course_title) VALUES"
+            for x in os.listdir('sql_queries'):
+                with open(f"sql_queries/{x}") as f:
+                    query += f.read()
+            query = query[:-1] + ";"
+            connector.cursor.execute(query)
+        except Exception as error:
+            print("Error while creating PostgreSQL: ", error)
+        finally:
+            connector.close_conn()
+
+    @staticmethod
+    def execute_query(q):
+        if not connector.cursor:
+            connector.make_connection()
+        connector.cursor.execute(q)
+        connector.close_conn()
 
     @staticmethod
     def close_conn():

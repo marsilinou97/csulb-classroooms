@@ -1,1 +1,0 @@
-( '8886', 'MW', '14:00:00', '15:50:00', '', 'Morris R', 'ED2', '175', 'SEM', 'FUNDAMENTALS OF HEBREW'),
