@@ -2,139 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/DAO.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/classrooms_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/classrooms_scraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/connector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/dao_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/helper_methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/db_executor.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/db_executor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/scraper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/scraper_temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/courses_info_scraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AAAS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ACCT.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AFRS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AH.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AIS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AMST.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ANTH.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ARAB.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ART.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ASAM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ASLD.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ASTR.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ATEP.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ATHL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/AxST.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/BIOL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/BLAW.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/BME.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CAFF.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CBA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CDFS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CECS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CEM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHEM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHIN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHLS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CHzE.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CLSC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/COMM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/COUN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CRJU.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CWL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CxLA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/CzE.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/DANC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/DESN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/DPT.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ECON.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDAD.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDCI.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDEC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDEL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDLD.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDSE.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDSP.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDSS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EDzP.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ENGL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ENGR.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EOP.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ESzP.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ETEC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EzE.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/EzT.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FCS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FEA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FIL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FIN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FMD.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FREN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/FSCI.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GBA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GEOG.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GEOL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GERM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GERN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/GK.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HCA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HDEV.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HEBW.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HIST.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HRM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/HzSC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/ITAL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/IxST.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/IzS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/JAPN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/JOUR.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/KHMR.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/KIN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/KOR.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/LAT.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/LING.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/LxST.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MAE.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MATH.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MGMT.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MKTG.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MTED.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MUS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/MzS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/NRSG.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/NSCI.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/NUTR.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PHIL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PHSC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PHYS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/POSC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PPA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/PSY.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/REC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RGR.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RSCH.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RUSS.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/RxST.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SCAE.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SCED.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SCM.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SDHE.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SOC.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SPAN.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SRL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/STAT.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SxI.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/SzW.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/THEA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/UDCP.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/UHP.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/UNIV.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/VIET.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/sql_queries - Copy/WGSS.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/db_executor.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,7 +296,7 @@
       <workItem from="1578168816307" duration="1034000" />
       <workItem from="1578175069788" duration="5972000" />
       <workItem from="1578197437372" duration="7418000" />
-      <workItem from="1578218295953" duration="921000" />
+      <workItem from="1578218295953" duration="1596000" />
     </task>
     <servers />
   </component>
