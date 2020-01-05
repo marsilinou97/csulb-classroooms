@@ -1,0 +1,1 @@
+( '8213', 'TuTh', '14:00:00', '15:50:00', 'Class instruction is: Hybrid (Face to Face & Online).', 'Lekht N', NULL, '132', 'SEM', 'FUNDAMENTALS OF RUSSIAN'),( '', 'TBA', 'None', 'None', 'additional meeting detail', 'Staff', NULL, '236', '', 'FUNDAMENTALS OF RUSSIAN'),( '7350', 'TBA', 'None', 'None', 'Instructor Consent Required', 'Staff', NULL, '245', 'SUP', 'DIRECTED STUDIES'),

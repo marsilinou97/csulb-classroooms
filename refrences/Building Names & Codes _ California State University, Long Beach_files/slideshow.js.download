@@ -1,0 +1,236 @@
+(function($) {
+  Drupal.behaviors.slideshow = {
+    attach: function(context, settings) {
+
+function setPlayPauseText() {
+
+  setTimeout(function(){
+
+    var activeVideoWrapper = $('.flex-hero-slideshow-active-slide .hero-slide-wrapper .video-wrapper');
+
+    if ( activeVideoWrapper.data('mp4') !== undefined || activeVideoWrapper.data('webm') !== undefined ) {
+
+      // Define Play Button and video elements
+      var playButton = document.getElementById("play-pause");
+      var playButtonText = document.getElementById("play-pause-text");
+      var video = $('.flex-hero-slideshow-active-slide #hero-video')[0];
+
+      // Set button text
+      if (video.paused == true) {
+        //playButton.innerHTML = "Pause Video";
+        playButtonText.innerHTML = "Pause Hero Slide Video";
+        console.log("Hero video was paused when initialized.");
+        $('#play-pause, #hero-video-controls').removeClass('playing');
+      }
+      else {
+        // playButton.innerHTML = "Pause Video";
+        playButtonText.innerHTML = "Pause Hero Slide Video";
+        console.log("Hero video was playing when initialized.");
+        $('#play-pause, #hero-video-controls').addClass('playing');
+      }
+    }
+    // Tab focus
+    var mousedown = false;
+    $('#play-pause').on('mousedown', function () {
+      mousedown = true;
+    });
+    $('#play-pause').on('focusin', function () {
+      if(!mousedown) {
+        $(this).addClass("tabfocus");
+      }
+      mousedown = false;
+    });
+    $('#play-pause').on('focusout', function() {
+      $(this).removeClass('tabfocus');
+    });
+
+  }, 750);
+
+}
+
+
+// Set Play Button and Video + Listener Function
+function setPlayPauseButton() {
+
+  // Clear existing play button
+  // $('#play-pause-wrapper').remove();
+  $('#hero-video-controls').remove();
+  var activeVideoWrapper = $('.flex-hero-slideshow-active-slide .hero-slide-wrapper .video-wrapper');
+
+  // Play button listener function
+  setTimeout(function(){
+
+    if ( activeVideoWrapper.data('mp4') !== undefined || activeVideoWrapper.data('webm') !== undefined ) {
+      // Mistaken version
+      //$('.flex-hero-slideshow-active-slide .hero-slide-wrapper .hero-links .field-content').prepend("<div id='play-pause-wrapper'><a id='play-pause' tabindex='0' class='playing'>Pause Video</a></div>");
+      $('.flex-hero-slideshow-active-slide .hero-slide-wrapper').append("<div id='hero-video-controls' class='playing'><a href='/' id='play-pause' tabindex='0' class='playing'><span class='element-invisible off_screen' id='play-pause-text'>Pause Hero Slide Video</span></a></div>");
+      // Define Play Button and video elements
+      var playButton = document.getElementById("play-pause");
+      var playButtonText = document.getElementById("play-pause-text");
+      var video = $('.flex-hero-slideshow-active-slide #hero-video')[0];
+
+      // Event listener for the play/pause button
+      playButton.addEventListener("click", function(e) {
+
+        if (video.paused == true) {
+          // Play the video
+          video.play();
+          console.log('Play button clicked.');
+          // Update the button text to 'Pause Video'
+          //playButton.innerHTML = "Pause Video";
+          playButtonText.innerHTML = "Pause Hero Slide Video";
+          $('#play-pause, #hero-video-controls').addClass('playing');
+        } else {
+          // Pause the video
+          video.pause();
+          console.log('Pause button clicked.');
+          // Update the button text to 'Play Video'
+          //playButton.innerHTML = "Play Video";
+          playButtonText.innerHTML = "Play Hero Slide Video";
+          $('#play-pause, #hero-video-controls').removeClass('playing');
+        }
+        // Prevent default click behavior on Play/Pause button click
+        e.preventDefault();
+      });
+    }
+  }, 150);
+}
+
+     $( window ).load(function() {
+
+       // Tab focus for prev-next buttons in hero slideshow
+       var mousedown = false;
+       $('.flex-hero-slideshow-prev, .flex-hero-slideshow-next').on('mousedown', function () {
+         mousedown = true;
+       });
+       $('.flex-hero-slideshow-prev, .flex-hero-slideshow-next').on('focusin', function () {
+         if(!mousedown) {
+           $(this).css('border-bottom','4px solid #f9a600');
+         }
+         mousedown = false;
+       });
+       $('.flex-hero-slideshow-prev, .flex-hero-slideshow-next').on('focusout', function() {
+         $(this).css('border-bottom','none');
+       });
+
+       //Add "Featured Slide " prefix text & href="#" in each control
+        var featuredControlListItems = $("#content #flexslider-1 .flex-control-paging li, #flexslider-2 .flex-control-paging li");
+        featuredControlListItems.each(function() {
+          var pager_link = $(this).find("a");
+          var pager_link_text = pager_link.html();
+          if (pager_link_text.toLowerCase().indexOf("slide") == "-1")
+          {
+              pager_link.html("Featured Slide " + pager_link_text);
+          }
+          pager_link.attr("href", "#");
+        });
+
+        setTimeout(function(){
+          setPlayPauseText();
+        }, 250);
+      });
+
+      $(document).ready(function() {
+       //Add "Slide " prefix text & href="#" in each control
+        var heroControlListItems = $("#flexslider-1 .flex-hero-slideshow-control-nav li");
+        heroControlListItems.each(function() {
+          var pager_link = $(this).find("a");
+          var pager_link_text = pager_link.html();
+          if (pager_link_text.toLowerCase().indexOf("slide") == "-1")
+          {
+              pager_link.html("Slide " + pager_link_text);
+          }
+          pager_link.attr("href", "#");
+        });
+
+        //Add -selected invisible test to active slide and add aria-hidden=true for all inactive slides
+        //Add aria-hidden=false to active slide
+        $('#flexslider-1 ol .flex-hero-slideshow-active').append('<span class="element-invisible sr-only">- selected</span>');
+        /* $('#flexslider-1 .slides li').attr('aria-hidden', 'true');
+        $('#flexslider-1 .slides li.flex-hero-slideshow-active-slide').attr('aria-hidden', 'false'); */
+        $('#flexslider-1 .slides li, #flexslider-2 .slides li').css('display', 'none');
+        $('#flexslider-1 .slides li.flex-hero-slideshow-active-slide, #flexslider-1 .slides .flex-active-slide, #flexslider-2 .slides .flex-active-slide').css('display', 'block');
+        $('.front #flexslider-1 .slides li.flex-hero-slideshow-active-slide').find('.hero-content').attr('id','jump-to-content');
+        // $('#jump-to-content').attr('tabindex','0');
+        //When slide changed manage aria-hidden and selected text
+        $('#flexslider-1, #flexslider-2').bind('after', function(e, slider) {
+          var current = $('#flexslider-1 li.flex-hero-slideshow-active-slide');
+          $("#flexslider-1 .flex-hero-slideshow-control-nav li a span.sr-only").remove();
+          $('#flexslider-1 .flex-hero-slideshow-active').append('<span class="element-invisible sr-only">- selected</span>');
+          /* $('#flexslider-1 .slides li').attr('aria-hidden', 'true');
+          $('#flexslider-1 .slides li.flex-hero-slideshow-active-slide').attr('aria-hidden', 'false'); */
+          $('#flexslider-1 .slides li, #flexslider-2 .slides li').css('display', 'none');
+          $('#flexslider-1 .slides li.flex-hero-slideshow-active-slide, #flexslider-1 .slides .flex-active-slide, #flexslider-2 .slides .flex-active-slide').css('display', 'block');
+          $('.front #flexslider-1 .slides li.flex-hero-slideshow-active-slide').find('.hero-content').attr('id','jump-to-content');
+          // $('#jump-to-content').attr('tabindex','0');
+        });
+        $('#flexslider-1, #flexslider-2').bind('before', function(e, slider) {
+          $('#flexslider-1 .slides li, #flexslider-2 .slides li').css('display', 'block');
+          $('.front #flexslider-1 .slides li').find('.hero-content').removeAttr('id');
+          $('.front #flexslider-1 .slides li').find('.hero-content').removeAttr('tabindex');
+        });
+
+        $('.flexslider').bind('before', function(e, slider) {
+          if (!$('body').hasClass("processed-video-script") && $(window).width() > 767) {
+              play_slideshow_video();
+          }
+        });
+
+        // Fix colorbox
+        if ($(window).width() > 1024) {
+          var width = $(window).width() * 0.7;
+          var height = width * 0.75;
+          $(".colorbox-load").colorbox({iframe:true, innerWidth:width, innerHeight:height});
+        }
+
+        var play_slideshow_video = function() {
+          if ($(window).width() < 767) {
+            return;
+          }
+
+          // @TODO add some caching / memoization to this function to make it a bit smarter.
+          $("#hero-video").closest(".video-wrapper").removeClass("video-loaded");
+          //$("#hero-video").remove();
+
+          // var $videoPoster = $(".video-slideshow .flex-hero-slideshow-active-slide img, .video-slideshow .flex-active-slide img");
+
+          $(".video-slideshow .flex-hero-slideshow-active-slide .video-wrapper, .video-slideshow .flex-active-slide .video-wrapper").each(function () {
+            var $this = $(this);
+
+            var mp4 = $this.data('mp4');
+            var webm = $this.data('webm');
+
+            var video = $.parseHTML("<video height='auto' id='hero-video' muted='muted' loop='loop' autoplay='autoplay' poster='" + Drupal.settings.basePath + "sites/all/modules/custom/features/lb_slideshow/images/transparent_pixel.png'></video>");
+
+            if (mp4 !== undefined) {
+              $(video).append("<source src='" + mp4 + "' type='video/mp4' />");
+              $("body").addClass("processed-video-script");
+            }
+
+            if (webm !== undefined) {
+              $(video).append("<source src='" + webm + "' type='video/webm' />");
+              $("body").addClass("processed-video-script");
+            }
+
+            $(video).bind('', function(e) {
+              if (mp4 !== undefined || webm !== undefined) {
+                $this.addClass("video-loaded");
+              }
+            });
+            $this.append(video);
+            setPlayPauseButton();
+            setPlayPauseText();
+
+          });
+        };
+
+        if (!$('body').hasClass("processed-video") && $(window).width() > 767) {
+          play_slideshow_video();
+          $("body").addClass("processed-video");
+        }
+
+        $(".flex-hero-slideshow-direction-nav, .flex-hero-slideshow-control-nav, .flex-direction-nav, .flex-control-nav  ").click(play_slideshow_video);
+      });
+    }
+  };
+})(jQuery);

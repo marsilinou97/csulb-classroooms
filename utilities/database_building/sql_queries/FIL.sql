@@ -1,0 +1,1 @@
+( '5945', 'MW', '14:00:00', '15:50:00', '', 'Daulo I', NULL, '78', 'SEM', 'FUNDAMENTALS OF FILIPINO'),

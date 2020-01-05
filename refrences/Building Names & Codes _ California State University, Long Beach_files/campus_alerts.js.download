@@ -1,0 +1,81 @@
+(function ($) {
+  Drupal.behaviors.campus_alerts = {
+    attach: function (context, settings) {
+      $('body').not('.ember').not('.campus-alert-active').once('campus-alerts', function() {
+        if (!$('body').hasClass('page-admin-config-content-campus-alerts')) {
+          //return;
+        }
+        // Banner Alert
+        $(window).load(function() {
+          $('<div class="campus-banner-alert"/>').load('/ajax/campus-alerts/banner', function(response, status, xhr) {
+            if (status != 'success' || xhr.responseText == '' || xhr.responseText == 'ok') {
+              return;
+            }
+
+            var $this_ele = $(this);
+            var $header_ele = $('#header');
+            var banner_height = 0;
+
+            // get height of header
+            var $clone_ele = $this_ele.clone();
+
+            $clone_ele.css('visibility', 'hidden').css('position', 'absolute');
+            $header_ele.append($clone_ele);
+
+            // setting aria hidden to false;
+            $header_ele.attr("aria-hidden", false);
+            $header_ele.attr("aria-live", "polite");
+            $header_ele.attr("role", "alert");
+
+            // getting height after expansion
+            banner_height = $clone_ele.height();
+
+            // destroy clone
+            $clone_ele.remove();
+
+
+            $this_ele.hide();
+            $header_ele.append($(this));
+            $this_ele.slideToggle('400', function(a){
+              var adminBarHeight = $('#navbar-bar').outerHeight(); // javascript will convert null to a 0
+              var alertBoxHeight = $('#header').outerHeight();
+              $('.top-banner-gradient').css('top', adminBarHeight + alertBoxHeight);
+            });
+            $('#main').animate({ 'margin-top': '+='+ banner_height +'px'});
+
+            adjust_navigation_margin(banner_height);
+
+            // negative margin on the banner so fixed navigation stays on the top
+            $(window).scroll(function() {
+              var banner_height = $('.campus-banner-alert').height();
+              adjust_navigation_margin(banner_height);
+            })
+          });
+        });
+
+        // Page Alert
+        $('<div class="campus-page-alert"/>').load('/ajax/campus-alerts/page', function(response, status, xhr) {
+          if (status != 'success' || xhr.responseText == '' || xhr.responseText == 'ok') {
+            return;
+          }
+          var alert = $(this);
+          $('.close', alert).click(function() {
+            alert.hide();
+          });
+          $('body').prepend($(this));
+        });
+      });
+    }
+  };
+
+  function adjust_navigation_margin(banner_height) {
+    var scroll_to_top_px = $(window).scrollTop();
+    if (scroll_to_top_px >= banner_height) {
+      $('#navigation').css('margin-top', -banner_height+'px');
+    }
+    if (scroll_to_top_px < banner_height) {
+      $('#navigation').css('margin-top', -scroll_to_top_px+'px');
+    }
+  }
+
+})(jQuery);

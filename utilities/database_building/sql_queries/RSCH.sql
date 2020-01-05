@@ -1,0 +1,1 @@
+( '10956', 'TuTh', '14:00:00', '15:15:00', '', 'Arevalo S', NULL, '473', 'LEC', 'HEALTH DISPARITIES'),( '11346', 'MW', '11:00:00', '12:15:00', 'Class offered with ENGR-361-01', 'Ayala P', NULL, '340', 'SEM', 'SCIENTIFIC RESEARCH COMMUNICAT'),

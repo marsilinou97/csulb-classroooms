@@ -1,0 +1,1067 @@
+/**
+ * @file
+ * A JavaScript file for the theme.
+ *
+ * In order for this JavaScript to be loaded on pages, see the instructions in
+ * the README.txt next to this file.
+ */
+
+// JavaScript should be made compatible with libraries other than jQuery by
+// wrapping it with an "anonymous closure". See:
+// - http://drupal.org/node/1446420
+// - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
+(function ($, Drupal, window, document, undefined) {
+  $(function() {
+    var clickEvent = (navigator.userAgent.match(/iPad/i)) ? "touchstart" : "click";
+
+    // Image float fixes
+    $( "#content figure" ).each(function() {
+      if ( $(this).css("float") == "left" && !($(this).hasClass("align-left")) ) {
+        $(this).addClass("align-left");
+      }
+      if ( $(this).css("float") == "right" && !($(this).hasClass("align-right")) ) {
+        $(this).addClass("align-right");
+      }
+    });
+    $( "#content img" ).each(function() {
+      if ( $(this).css("float") == "left" && !($(this).hasClass("align-left")) && !($(this).closest("figure").hasClass("align-left"))  ) {
+        $(this).addClass("align-left");
+      }
+      if ( $(this).css("float") == "right" && !($(this).hasClass("align-right")) && !($(this).closest("figure").hasClass("align-right"))  ) {
+        $(this).addClass("align-right");
+      }
+    });
+
+    // Open the Search when the search button is clicked
+    $(".block.search-block .block-title").on(clickEvent, function(e) {
+      e.preventDefault();
+
+      if ($(this).attr('aria-expanded') === 'true') {
+        $(this).attr('aria-expanded', 'false');
+      }
+      else {
+        $(this).attr('aria-expanded', 'true');
+      }
+
+      $(this).closest(".search-block").toggleClass("search-open");
+      $('#google-appliance-block-form').toggleClass("search-open");
+      if ($(this).closest(".search-block").hasClass("search-open")) {
+        $("#edit-search-keys").focus();
+      }
+
+      if ($(this).closest(".search-block").hasClass("search-open") && $("#navigation").hasClass("menu-open")) {
+        $(".menu-hamburger").click();
+      }
+      if ($(this).closest(".search-block").hasClass("search-open") && $('.mobile-menu-popout-link').hasClass('expanded')) {
+        $(".mobile-menu-popout-link").click();
+      }
+    });
+
+    $('#block-google-appliance-ga-block-search-form #edit-submit').keydown(function(e) {
+      //tab
+			if (e.keyCode == 9 && !e.shiftKey){
+        $('#block-google-appliance-ga-block-search-form').removeClass("search-open");
+        $('#google-appliance-block-form').removeClass("search-open");
+        $('.block.search-block .block-title').attr('aria-expanded', 'false');
+      }
+    });
+    $('#block-google-appliance-ga-block-search-form #edit-search-keys').keydown(function(e) {
+      //shit tab
+			if (e.keyCode == 9 && e.shiftKey){
+        $('#block-google-appliance-ga-block-search-form').removeClass("search-open");
+        $('#google-appliance-block-form').removeClass("search-open");
+        $('.block.search-block .block-title').attr('aria-expanded', 'false');
+      }
+    });
+
+    function isWindows() {
+      return navigator.platform.indexOf('Win') > -1
+    }
+    $.fn.hasAttr = function(name) {
+      return this.attr(name) !== undefined;
+    };
+
+    /* isKeyDown function */
+    var isKeyDown = {};
+    window.onkeyup = function(e) { isKeyDown[e.keyCode] = false; }
+    window.onkeydown = function(e) { isKeyDown[e.keyCode] = true; }
+
+    /* Slick Slide tabindex values */
+    function slickSlideTabindexSet() {
+      jQuery('.discover-view .slick_wrapper .slick__slide').each(function() {
+        jQuery(this).find('.field-name-title-field a').attr('tabindex','-1');
+        jQuery(this).find('.field-name-field-thumbnail a').attr('tabindex','-1');
+        console.log('slick');
+        if ( jQuery(this).attr('aria-hidden') == "false" ) {
+          jQuery(this).find('.field-name-title-field a').attr('tabindex','0');
+        }
+      });
+      // Don't allow cloned slides to get tab focus
+      jQuery('.discover-view .slick_wrapper .slick__slide.slick-cloned').each(function() {
+	      console.log('cloned');
+        if ( jQuery(this).attr('index') < 0 ) {
+          jQuery(this).find('.field-name-title-field a').attr('tabindex','-1');
+        }
+      });
+
+    }
+
+    //Add link title in read more in hero slider for off-screen users
+    $(document).ready( function() {
+
+      $('#edit-search-link').once('search-link', function() {
+        $(this).click(function(event) {
+          event.preventDefault();
+          $('.hidden-search').toggle();
+        });
+      });
+
+      $('.hidden-search #edit-submit').keydown(function(e) {
+        //tab
+  			if (e.keyCode == 9 && !e.shiftKey){
+          $('.hidden-search').toggle();
+        }
+      });
+      $('.hidden-search #edit-search').keydown(function(e) {
+        //shit tab
+  			if (e.keyCode == 9 && e.shiftKey){
+          $('.hidden-search').toggle();
+        }
+      });
+
+      // expand menu
+      $('#block-lb-group-og-custom-menu-block > ul.menu > li.is-expanded > a.active').siblings('a.expand-menu-button').once('menuexpanded', function() {
+        $(this).click();
+      });
+
+      // Region JAWS issue fix
+      $('form.webform-client-form').attr('role','form');
+      $('form.webform-client-form .form-required').attr('aria-hidden','true');
+
+      // Change <h2> in footer menu block titles to <h3>
+      $('.region-bottom .block-menu-block h2').each(function() {
+        $(this).replaceWith('<h3>'+$(this).html()+'</h3>');
+      });
+      $('.region-bottom .block-menu-block h3').addClass('block__title block-title');
+
+      // Add class to last megamenu link
+      $('.accessible-megamenu-panel li.last .menu .menu-column li.last').last().addClass('last-megamenu-link');
+      $('#block-bean-mobile-call-to-action-links .bean-generic-block ul li').last().addClass('last-cta-link');
+      // Force focus on menu close link when last megamenu link focus blurred
+      $('.last-megamenu-link a').on('blur',function(e) {
+        //console.log('Last link in megamenu blur.');
+        if ( isKeyDown[9] ) {
+          //console.log('Tab key was down when link focus blurred.');
+          $('.menu__link.menu-hamburger.opened').addClass('tabfocus').toggleClass('closefocus').focus();
+        }
+      });
+      // Force focus on last megamenu link when shift+tab off menu close link
+      $('#block-bean-header-logo a.site-logo, .last-cta-link a').on('focus',function(e) {
+        //console.log('Focus on site logo or last CTA link');
+        if ( $('.menu__link.menu-hamburger.opened.closefocus').length > 0 ) {
+          //console.log('Focus off hamburger AND close focus class exists.');
+          $('.menu__link.menu__link.menu-hamburger.opened.closefocus').removeClass('closefocus');
+          $('.last-megamenu-link a').addClass('tabfocus').focus();
+        }
+      });
+      /*
+      // Discover Slick slider accessibility fixes
+      $('.discover-view .slick_wrapper .slick__arrow button').on('focus',function(e) {
+        $(this).addClass('tabfocus');
+      });
+      $('.discover-view .slick_wrapper .slick__arrow button').on('blur',function(e) {
+        $(this).removeClass('tabfocus');
+      });
+      $('.discover-view .slick_wrapper .slick__arrow button').on('click',function(e) {
+        setTimeout(function(){
+          slickSlideTabindexSet();
+        }, 525);
+      });
+      $('.discover-view .slick_wrapper .slick__slide .slide__content article .field-name-title-field a').on('focus',function(e) {
+        $(this).attr('tabindex','0');
+      });
+      */
+      // Update Instagram Thumbnail ALT attributes
+      $('.paragraphs-item-instagram-paragraph .view-instagram-view img').each(function(index) {
+        /* var groupTitle = 'CSULB';
+        if ( $('.region-navigation .group-title').length > 0 ) groupTitle = $('.region-navigation .group-title').text();
+        var altAttr = groupTitle + ' ' + $(this).attr('alt');
+        var trimmedAlt = altAttr.replace('Instagram Thumbnail','Instagram'); */
+        $(this).attr('alt', 'Instagram post ' + (index+1));
+      });
+
+      // Change group title to <h1> on Unit and Department content types
+      var unitDeptTitle = $('#block-lb-group-group-title .group-title a').html();
+      var unitDeptPath = $('#block-lb-group-group-title .group-title a').attr('href');
+      var unitDeptH1 = '<h1 class="group-title"><a href="'+unitDeptPath+'" class="active" tabindex="0" style="border-bottom: none;">'+unitDeptTitle+'</a></h1>'
+      if ( $('.node-type-unit .group-title, .node-type-department .group-title').length > 0) {
+        $('#block-lb-group-group-title .group-title').detach();
+        $('#block-lb-group-group-title').append(unitDeptH1);
+      }
+      // Remove page titles on home page and unit/department nodes
+      $('.front #page-title, .node-type-unit #page-title, .node-type-department #page-title').remove();
+
+      /* $('body.front #skip-link a:eq(0)').attr('href', '#jump-to-content').click(function(e){
+	      e.preventDefault();
+	      $(document).scrollTop( $("#flexslider-1").offset().top );
+        $("#jump-to-content").focus();
+        $("#jump-to-content").addClass('tabfocus');
+	      //$("#flexslider-1 a.flex-hero-slideshow-prev").focus();
+      }); */
+
+
+      $(document).on('click', 'body.front #skip-link a:eq(0)', function(e) {
+        e.preventDefault();
+        // $(document).scrollTop( $("#flexslider-1").offset().top );
+        // $("#jump-to-content").focus();
+        // $("#jump-to-content").addClass('tabfocus');
+        jQuery('#jump-to-content strong.hero-title').attr('tabindex','0');
+        jQuery('#jump-to-content strong.hero-title').focus();
+        // jQuery("#jump-to-content .hero-links span.field-content a").focus();
+      });
+
+      // $(document).on('blur', '#jump-to-content', function() {
+      //   $(this).removeClass('tabfocus');
+      // });
+
+
+      //var attrs = { };
+
+      //$.each($(".node-type-unit span.group-title, .node-type-department span.group-title")[0].attributes, function(idx, attr) {
+      //  attrs[attr.nodeName] = attr.nodeValue;
+      //});
+      //$(".node-type-unit span.group-title, .node-type-department span.group-title").replaceWith(function () {
+      //  return $('<h1 class="group-title" />', attrs).append($(this).contents());
+      //});
+      // Remove page titles on home page and unit/department nodes
+
+
+      var heroListItems = $(".front .view-hero-slideshow #flexslider-1 ul.slides li");
+      heroListItems.each(function() {
+        var hero_title = $(this).find(".hero-title").text();
+        // Add spans in links
+        var heroLink = $(this).find(".hero-links a")
+          heroLink.each(function() {
+            var linkTitle = $(this).text();
+            var hero_link_html = $(this).html();
+            if ((hero_title != '' || hero_title != "undefined") && (hero_link_html != '' || hero_link_html != "undefined")) {
+              $(this).html('<span class="element-invisible off_screen">' + hero_title + "</span>" + hero_link_html);
+            }
+          });
+      });
+
+      //change flexslider-1 id to flexslider-2
+      $("#block-bean-group-featured-news-slideshow .view-display-id-embed_3 #flexslider-1").attr('id', 'flexslider-2');
+      //$("#block-bean-group-featured-news-slideshow .view-display-id-embed_3 .flexslider .slides li").css( "border", "2px solid green");
+      //$("#block-bean-group-featured-news-slideshow .view-display-id-embed_3 .flexslider .slides li").css( "display", "none");
+      //$("#block-bean-group-featured-news-slideshow .view-display-id-embed_3 .flexslider .slides li").css( "display", "");
+
+      //remove h2 with class element-invisible
+      $("h2.element-invisible").remove();
+      //console.log('remove');
+
+
+      // Force captioned images to follow image width
+      $('#page figure.image img').each(function() {
+        if ($(this).hasAttr("width")) {
+          var imgWidth = $(this).attr("width");
+	      $(this).parent().width(imgWidth);
+        }
+      });
+
+      if ($(window).width() < 768) {
+        // $('.region-bottom .footer-menu-block').find('.menu-block-wrapper').toggle("fast");
+
+        // cm0dit
+        $('.region-bottom .block-menu-block h3').keydown(function(e){
+         if (e.keyCode == 13 || e.keyCode == 32){
+           $(this).next().toggle("fast", function(){
+             $(this).prev().toggleClass('chevup');
+           });
+           e.preventDefault();
+           return false;
+         }
+        });
+
+        $('.region-bottom .block-menu-block h3').click(function(e){
+          $(this).next().toggle("fast", function(){
+            $(this).prev().toggleClass('chevup');
+          });
+          e.preventDefault();
+          return false;
+        });
+
+        $('.region-bottom .block-menu-block h3').attr({'tabindex': '0', 'aria-haspopup':'true'});
+
+        // $('.region-bottom .block-menu-block h3').attr('aria-haspopup', 'true');
+        // cm0dit
+
+      }else{
+        $('.region-bottom .block-menu-block .menu-block-wrapper').css('display', 'block');
+      }
+
+
+    });
+
+    $(window).load(function(){
+
+      setTimeout(function(){
+        // expand menu
+        $('#block-lb-group-og-custom-menu-block > ul.menu > li.is-expanded > a.active').siblings('a.expand-menu-button').once('menuexpanded', function() {
+          $(this).click();
+        });
+
+        // Discover slideshow accessibility fixes
+        //('.discover-view .slick_wrapper .slick__slide .slide__content article .article-thumbnail a').attr('tabindex','-1');
+        //slickSlideTabindexSet();
+        // Set explore links tabindex to -1
+        //$('.view-explore .entity-callout .linkhref-processed, .explore-controlles li a, .discover-view .slick-list').attr('tabindex','-1');
+        $('.view-explore .entity-callout .linkhref-processed, .explore-controlles li a').attr('tabindex','-1');
+
+        // Don't allow cloned slides to get tab focus
+        //$('.discover-view .slick_wrapper .slick__slide.slick-cloned').each(function() {
+          //$(this).find('.field-name-title-field a').attr('tabindex','-1');
+        //});
+
+        $('.homepage-news-block .slick__arrow .slick-next, .homepage-news-block .slick__arrow .slick-prev').attr('tabindex','-1');
+
+      }, 500);
+
+      // Add tab focus class to group-titles
+      setTimeout(function(){
+        var mousedown = false;
+        $('#block-lb-group-group-title .group-title a').on('mousedown', function () {
+          mousedown = true;
+        });
+        $('#block-lb-group-group-title .group-title a').on('focusin', function () {
+          if(!mousedown) {
+            $(this).addClass("tabfocus");
+          }
+          mousedown = false;
+        });
+        $('#block-lb-group-group-title .group-title a').on('focusout', function() {
+          $(this).removeClass('tabfocus');
+        });
+      }, 500);
+
+      // Allow multiple accordions to be open at once
+      $('.view-call-to-action-accordion .ui-accordion').accordion({
+        collapsible:true,
+
+        beforeActivate: function(event, ui) {
+          // The accordion believes a panel is being opened
+          if (ui.newHeader[0]) {
+            var currHeader  = ui.newHeader;
+            var currContent = currHeader.next('.ui-accordion-content');
+          // The accordion believes a panel is being closed
+          } else {
+            var currHeader  = ui.oldHeader;
+            var currContent = currHeader.next('.ui-accordion-content');
+          }
+          // Since we've changed the default behavior, this detects the actual status
+          var isPanelSelected = currHeader.attr('aria-selected') == 'true';
+
+           // Toggle the panel's header
+          currHeader.toggleClass('ui-corner-all',isPanelSelected).toggleClass('ui-accordion-header-active accordion-header-active ui-state-active ui-corner-top',!isPanelSelected).attr('aria-selected',((!isPanelSelected).toString()));
+
+          // Toggle the panel's icon
+          currHeader.children('.ui-icon').toggleClass('ui-icon-triangle-1-e',isPanelSelected).toggleClass('ui-icon-triangle-1-s',!isPanelSelected);
+
+           // Toggle the panel's content
+          currContent.toggleClass('accordion-content-active ',!isPanelSelected)
+          if (isPanelSelected) { currContent.slideUp(); }  else { currContent.slideDown(); }
+
+          return false; // Cancels the default action
+        }
+      });
+
+      // Variables to identify Windows/IE/Firefox/Safari
+      var isWindows = navigator.platform.indexOf('Win') > -1;
+      var isIE = /*@cc_on!@*/false || !!document.documentMode;
+      var isFirefox = typeof InstallTrigger !== 'undefined';
+      var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS');
+
+      // Adjust scroll if IE or Firefox
+      // if (window.location.hash && (isFirefox || isIE) ) {
+      if (window.location.hash) {
+        setTimeout( function(){
+          window.scrollBy(0,-70);
+        }, 500 );
+      }
+      // Scroll to #page on "Jump to Content" click
+
+      $('.element-invisible').on('click',function(e) {
+        // $(this).find('a').first().focus().addClass('tabfocus');
+        if (isWindows) {
+          if (isFirefox || isIE || isSafari) {
+            setTimeout( function() {
+              window.scrollBy(0,-320);
+            }, 1000 );
+          } else {
+            setTimeout( function() {
+              window.scrollBy(0,-70);
+            }, 1000 );
+          }
+        } else {
+          if (isFirefox || isIE || isSafari) {
+            setTimeout( function() {
+              window.scrollBy(0,-265);
+            }, 1000 );
+          } else {
+            setTimeout( function(){
+              window.scrollBy(0,-70);
+            }, 1000 );
+          }
+        }
+        /* if ( $(this).attr('href') == '#content' || $(this).attr('href') == '#side-nav' ) {
+          e.preventDefault();
+          $(this).blur();
+          // $(this).find('a').first().focus();
+          var hashValue = $(this).attr('href');
+          var elemTop = $(hashValue).offset().top;
+          // var pageTop = $('#page').offset().top;
+          // alert('Hash value: '+hashValue+' Page Offset: '+pageTop+' Hash Offset: '+elemTop);
+          if (isWindows) {
+            window.scrollTo(0, elemTop-300);
+          } else {
+            window.scrollTo(0, elemTop-220);
+          }
+
+        } */
+      });
+      // Adjust scroll on anchor clicks if IE or Firefox
+      $('a').on('click',function(e) {
+        if (window.location.hash && (isFirefox || isIE) && !($(this).hasClass('element-invisible')) ) {
+          setTimeout( function(){
+            window.scrollBy(0,-70);
+          }, 500 );
+        }
+      });
+
+
+      // Set tabindex for every link on page to 0
+      $('body a:not(.accessible-ignore)').attr('tabindex','0');
+      $('body a#main-content, .menu .menu__link.nolink').attr('tabindex','-1');
+      $('.mobile-menu-popout .menu-block-wrapper > ul > li > a.menu__link.nolink').each(function() {
+		    $(this).attr('tabindex', '0');
+		  });
+      // Moving accessibility into theme JS instead of custom LB module JS
+        /* More Accordion/FAQ Accessibility */
+        if ($('.jquery-ui-filter-accordion').length > 0) {
+	        $('.jquery-ui-filter-accordion-header').each(function() {
+		        $(this).attr('role','button'); // Change role="tab" to role="button" for JAWS issue
+		        $(this).removeAttr('aria-selected'); // Remove aria-selected attributes
+		        $tabcontent = $(this).next();
+		        $tabcontent.attr('role','region'); // Change to role="region" instead of tabpanel
+		        $title = $(this).find('a').text();
+		        $(this).attr('tabindex', '0').find('a').remove(); // Fix tabbing issue
+		        $(this).append('<h2 class="anchor-replace">' + $title + '</div>');
+		      	if ($(this).hasClass('ui-accordion-header-active') || $(this).hasClass('accordion-header-active')) {
+			      	$(this).attr('aria-expanded', 'true');
+			      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+		      	} else {
+			      	$(this).attr('aria-expanded', 'false');
+			      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+		      	}
+		       });
+
+		      //swap aria attr on click of the tab header
+	      	$('.jquery-ui-filter-accordion-header').on('click',function(e) {
+		      	$tabcontent = $(this).next();
+		      	if ($(this).hasClass('ui-accordion-header-active') || $(this).hasClass('accordion-header-active')) {
+			      	$(this).attr('aria-expanded', 'true');
+			      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+		      	} else {
+			      	$(this).attr('aria-expanded', 'false');
+			      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+		      	}
+		      });
+
+		      $('.jquery-ui-filter-accordion-header').keyup(function(e){
+				if (e.keyCode == 13 || e.keyCode == 32){
+				    $(this).siblings('.jquery-ui-filter-accordion-header').attr('tabindex', '0');
+					$tabcontent = $(this).next();
+			      	if ( $(this).hasClass('ui-accordion-header-active') || $(this).hasClass('accordion-header-active')) {
+				      	$(this).attr('aria-expanded', 'true');
+				      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+			      	} else {
+				      	$(this).attr('aria-expanded', 'false');
+				      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+			      	}
+				}
+		      });
+
+        }
+
+        /* FAQ version */
+        if ($('.jquery-ui-filter-faq').length > 0) {
+	        $('.jquery-ui-filter-faq-header').each(function() {
+		        $(this).attr('role','button'); // Change role="tab" to role="button" for JAWS issue
+		        $(this).removeAttr('aria-selected'); // Remove aria-selected attributes
+		        $tabcontent = $(this).next();
+		        $tabcontent.attr('role','region'); // Change to role="region" instead of tabpanel
+		        $title = $(this).find('a').text();
+		        $(this).attr('tabindex', '0').find('a').remove();
+		        $(this).append('<h2 class="anchor-replace">' + $title + '</div>');
+		      	if ($(this).hasClass('accordion-header-active') || $(this).hasClass('ui-accordion-header-active')) {
+			      	$(this).attr('aria-expanded', 'true');
+			      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+		      	} else {
+			      	$(this).attr('aria-expanded', 'false');
+			      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+		      	}
+		       });
+
+		      //swap aria attr on click of the tab header
+	      	  $('.jquery-ui-filter-faq-header').on('click',function(e) {
+		      	$tabcontent = $(this).next();
+		      	if ($(this).hasClass('accordion-header-active') || $(this).hasClass('ui-accordion-header-active')) {
+			      	$(this).attr('aria-expanded', 'true');
+			      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+		      	} else {
+			      	$(this).attr('aria-expanded', 'false');
+			      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+		      	}
+		      });
+
+		      $('.jquery-ui-filter-faq-header').keyup(function(e){
+						if (e.keyCode == 13 || e.keyCode == 32){
+							$tabcontent = $(this).next();
+			      	if ($(this).hasClass('accordion-header-active') || $(this).hasClass('ui-accordion-header-active')) {
+				      	$(this).attr('aria-expanded', 'true');
+				      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+			      	} else {
+				      	$(this).attr('aria-expanded', 'false');
+				      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+			      	}
+						}
+					});
+        }
+        if($('.ui-accordion .views-row .ui-accordion-header').length > 0) {
+
+	        //set proper aria attr on load
+	        $('.ui-accordion .views-row .ui-accordion-header').each(function() {
+		        $(this).attr('role','button'); // Change role="tab" to role="button" for JAWS issue
+		        $(this).removeAttr('aria-selected'); // Remove aria-selected attributes
+		        $tabcontent = $(this).next();
+		        $tabcontent.attr('role','region'); // Change to role="region" instead of tabpanel
+		        $title = $(this).find('a .field-content').text();
+		        $(this).attr('tabindex', '0').find('a').remove();
+		        $(this).append('<h2 class="anchor-replace">' + $title + '</div>');
+		      	if ($(this).hasClass('ui-accordion-header-active') || $(this).hasClass('accordion-header-active')) {
+			      	$(this).attr('aria-expanded', 'true');
+			      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+		      	} else {
+			      	$(this).attr('aria-expanded', 'false');
+			      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+		      	}
+		       });
+
+		      //swap aria attr on click of the tab header
+	      	$('.ui-accordion .views-row .ui-accordion-header').on('click',function(e) {
+		      	$tabcontent = $(this).next();
+		      	if ($(this).hasClass('ui-accordion-header-active') || $(this).hasClass('accordion-header-active')) {
+			      	$(this).attr('aria-expanded', 'true');
+			      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+		      	} else {
+			      	$(this).attr('aria-expanded', 'false');
+			      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+		      	}
+		      });
+
+		      $('.ui-accordion .views-row .ui-accordion-header').keyup(function(e){
+						if (e.keyCode == 13 || e.keyCode == 32){
+							$tabcontent = $(this).next();
+			      	if ($(this).hasClass('ui-accordion-header-active') || $(this).hasClass('accordion-header-active')) {
+				      	$(this).attr('aria-expanded', 'true');
+				      	$tabcontent.attr('aria-expanded', 'true').attr('aria-hidden', 'false').find('a').attr('tabindex', '0').attr('aria-hidden', 'false');
+			      	} else {
+				      	$(this).attr('aria-expanded', 'false');
+				      	$tabcontent.attr('aria-expanded', 'false').attr('aria-hidden', 'true').find('a').attr('tabindex', '-1').attr('aria-hidden', 'true');
+			      	}
+						}
+					});
+				}
+
+    });
+
+
+    $(document).ready(function(){
+
+      // expand menu
+      $('#block-lb-group-og-custom-menu-block > ul.menu > li.is-expanded > a.active').siblings('a.expand-menu-button').once('menuexpanded', function() {
+        $(this).click();
+      });
+
+	if(!$('#page').hasClass('split-sidebar-first')){
+		$('a.side-nav-jump').css("display", "none");
+		$('a.side-nav-jump').attr("tabindex", "-1");
+	}
+      // Move left menu accordion arrow buttons
+      $('.sidebar-menu-block .menu .is-expanded.expanded .menu__link .expand-menu-button').each(function( index ) {
+        var parent = $(this).parent();
+        $(this).detach().insertAfter(parent).addClass('toggler').prepend('<span></span>');
+      });
+
+      $('.sidebar-menu-block .menu .active-trail').parent('.menu').css('display','block');
+      $('.sidebar-menu-block .menu .active-trail').parent('.menu__item.is-expanded.expanded').addClass('open');
+      $('.sidebar-menu-block .menu .active-trail').closest('.menu__item.is-expanded.expanded .toggler').attr('aria-expanded','true');
+
+      // Open Menu if Parent Link is Active and it is Closed
+      if ( $('li.is-active-trail > .menu').css('display','none') ) {
+        $('li.is-active-trail').children('.menu').slideToggle();
+      }
+
+      var sideNavItem = $('.sidebar-menu-block .menu .is-expanded.expanded .expand-menu-button, .sidebar-menu-block .menu .is-expanded.expanded .menu__link.nolink');
+
+      $(sideNavItem).each(function( index ) {
+        $(this).attr({
+          tabindex:'0',
+          role:'link'
+        });
+        if ( $(this).closest('li.menu__item.is-expanded').hasClass('open') ) {
+          $(this).attr('aria-expanded','true');
+        } else {
+          $(this).attr('aria-expanded','false');
+        }
+      });
+      $(sideNavItem).on('keydown', function (e) {
+      	var activeClass = $(this).closest('li.menu__item.is-expanded');
+        if (e.which == 13) {
+          e.preventDefault();
+          if( !$(activeClass).hasClass('open') ) {
+            $(this).attr('aria-expanded','true');
+            $(activeClass).addClass('open');
+
+            if ( $(this).hasClass('nolink') ) {
+              $(this).siblings('.menu').slideToggle();
+            } else {
+              if (!($(this).parent().hasClass('nolink'))) $(this).siblings('.menu').slideToggle();
+            }
+
+          } else {
+            $(this).attr('aria-expanded','false');
+        	$(activeClass).removeClass('open');
+
+            if ( $(this).hasClass('nolink') ) {
+              $(this).siblings('.menu').slideToggle();
+            } else {
+              if (!($(this).parent().hasClass('nolink'))) $(this).siblings('.menu').slideToggle();
+            }
+          }
+        }
+      });
+      $(sideNavItem).on('click', function () {
+        var activeClass = $(this).closest('li.menu__item.is-expanded');
+          if( !$(activeClass).hasClass('open') ) {
+            $(this).attr('aria-expanded','true');
+            $(activeClass).addClass('open');
+
+            if ( $(this).hasClass('nolink') ) {
+              $(this).siblings('.menu').slideToggle();
+            } else {
+              if (!($(this).parent().hasClass('nolink'))) $(this).siblings('.menu').slideToggle();
+            }
+
+          } else {
+            $(this).attr('aria-expanded','false');
+        	$(activeClass).removeClass('open');
+
+            if ( $(this).hasClass('nolink') ) {
+              $(this).siblings('.menu').slideToggle();
+            } else {
+              if (!($(this).parent().hasClass('nolink'))) $(this).siblings('.menu').slideToggle();
+            }
+          }
+      });
+      $(sideNavItem).on('focusin focusout', function () {
+        $(this).children('span').toggleClass('focused');
+      });
+      // Add side-nav ID to first sidebar
+      $('section.region-sidebar-first').attr('id','side-nav').attr('aria-label','Sidebar Navigation');
+
+      // Add tab focus class to left menu accordion button, quick links and OG Flexslider Prev/Next/Pager Links
+      var mousedown = false;
+      $('.expand-menu-button, .sidebar-menu-block ul.menu .menu__link, .quicklinks-view-block .view-content .views-row ul li a, .kwall-megamenu-wrapper .menu__item.last a.menu-hamburger, .accessible-megamenu .menu__link.menu-link-header, .flex-control-paging li a, .view-og-extras-nodes .flexslider .flex-direction-nav a, .view-og-extras-nodes .flexslider .flex-direction-nav a').on('mousedown', function () {
+        mousedown = true;
+      });
+      $('.expand-menu-button, .sidebar-menu-block ul.menu .menu__link, .quicklinks-view-block .view-content .views-row ul li a, .kwall-megamenu-wrapper .menu__item.last a.menu-hamburger, .accessible-megamenu .menu__link.menu-link-header, .flex-control-paging li a, .view-og-extras-nodes .flexslider .flex-direction-nav a, .view-og-extras-nodes .flexslider .flex-direction-nav a').on('focusin', function () {
+        if(!mousedown) {
+          $(this).addClass("tabfocus");
+          $('#main-navigation-resources').focusin(function(){
+            $(this).css("outline","none");
+            $(this).children("span").css("border-bottom","4px solid #f9a600");
+          });
+        }
+        mousedown = false;
+      });
+      $('.expand-menu-button, .sidebar-menu-block ul.menu .menu__link, .quicklinks-view-block .view-content .views-row ul li a, .kwall-megamenu-wrapper .menu__item.last a.menu-hamburger, .accessible-megamenu .menu__link.menu-link-header, .flex-control-paging li a, .view-og-extras-nodes .flexslider .flex-direction-nav a, .view-og-extras-nodes .flexslider .flex-direction-nav a').on('focusout', function() {
+        $(this).removeClass('tabfocus');
+        $('#main-navigation-resources').focusout(function(){
+          $(this).children("span").css("border-bottom", "none");
+        });
+      });
+
+      // Change accordion expand menu button element JAWS text
+      $('.sidebar-menu-block .menu .is-expanded.expanded .expand-menu-button').each(function( index ) {
+          var menuItemText = $(this).siblings('.menu__link').text();
+          var menuItemTitle = menuItemText.replace('Toggle Menu Expansion', '')
+          $(this).text('Toggle ' + menuItemTitle + ' Submenu');
+      });
+
+      /*
+       * Correct tabindex order to follow:
+       * left -> right(include accordion headers) -> footer
+      */
+      var tabindex = 1;
+      $('.sidebars a').each(function() {
+         if (this.type != "hidden") {
+           var $input = $(this);
+           $input.attr("tabindex", '0');
+           tabindex++;
+         }
+      });
+      $('#content a, .jquery-ui-filter-header').each(function() {
+         if (this.type != "hidden") {
+           var $input = $(this);
+           $input.attr("tabindex", tabindex);
+           tabindex++;
+         }
+      });
+      $('.region.region-bottom a').each(function() {
+         if (this.type != "hidden") {
+           var $input = $(this);
+           $input.attr("tabindex", tabindex);
+           tabindex++;
+         }
+      });
+	// left side navigation - start
+	if($(".menu .is-leaf > a").hasClass("active")){
+		var targetElement = $(".sidebar-menu-block .menu .active").parent("li").parent("ul");
+		targetElement.css("display", "block");
+		targetElement.parent("li").addClass("open");
+		targetElement.siblings(".expand-menu-button").attr("aria-expanded", true);
+		targetElement.siblings(".expand-menu-button").css("border-bottom", "none");
+	}
+	// left side navigation - end
+
+	//start: Featured News Carousel Block hidden when view is empty
+	if(!$.trim($("#block-bean-group-featured-news-slideshow .content>.view-og-extras-nodes").html())){
+		$("#block-bean-group-featured-news-slideshow").hide();
+	}
+	//end: Featured News Carousel Block hidden when view is empty
+
+    if($(".campus-banner-alert").length){
+      $("#header").attr("aria-hidden", false);
+    }
+
+  });
+
+
+if(!(navigator.userAgent.toLowerCase().indexOf('firefox') > -1)){ //added to fix keyboard focus on firefox
+    // Remove focus outlines
+    $("a").keypress(function() {
+         this.blur();
+         this.hideFocus = false;
+         this.style.borderBottom = null;
+    });
+    $("a").mousedown(function() {
+         this.blur();
+         this.hideFocus = true;
+         this.style.borderBottom = 'none';
+    });
+}
+
+    // Make Equal Heights for FA Slideshows
+      var highestCol = Math.max($('.featured-article-info-wrapper').height());
+      $('.featured-article-info-wrapper').height(highestCol);
+
+      var highestCol2 = Math.max($('.slide .group-head a').height());
+
+      $(".view-mode-narrow_listing.node-article .article-head").css("min-height", function(){
+          return (highestCol2 + 68);
+      });
+      //$('.view-mode-narrow_listing.node-article .article-head').height(highestCol);
+
+
+
+// Was preventing menu from closing. It was prob overreaching and running when it shouldn't
+/*
+    $(".menu-hamburger").attr("href", '#');
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if(isSafari==1){
+      $(".menu__link.menu__link.menu-hamburger").click(
+        function(){$(".menu__link.menu__link.menu-hamburger").siblings().toggleClass("open");}
+      )
+    }
+*/
+
+    // Open the menu when the menu button is clicked
+    $(".menu-hamburger").bind("click touchstart",function() {
+
+        $("#navigation").toggleClass("menu-open");
+        var $menuPanel = $(this).siblings(".accessible-megamenu-panel").first();
+        $menuPanel.toggleClass("open");
+        if ($(".accessible-megamenu-panel").hasClass("open"))
+        {
+          $('.menu-hamburger').attr('aria-label', 'close');
+          $('.menu-hamburger').addClass('opened');
+        } else {
+          $('.menu-hamburger').removeAttr('aria-label');
+          $('.menu-hamburger').removeClass('opened');
+        }
+  //      e.preventDefault();
+
+        if ($(".search-block").hasClass("search-open") && $("#navigation").hasClass("menu-open")) {
+          //$(".block.search-block .block-title").click();
+        }
+
+    });
+
+    // Keep the class on the menu hamburger
+    if($('.accessible-megamenu-panel').hasClass('open')) {
+      $("#navigation").addClass("menu-open");
+    }
+
+    $("body").on("keyup",function(e) {
+      if( e.which == 9 ) {
+        if(!$('.accessible-megamenu-panel').hasClass('open')) {
+          $('.menu-hamburger').removeClass('opened');
+        }
+      }
+    });
+
+    // Add focus back to menu link for IE
+    $(".accessible-megamenu .menu-hamburger").on("keydown",function(e) {
+      setTimeout( function(){
+        if( e.which == 13) {
+          $(".accessible-megamenu .menu-hamburger").focus();
+          if (!($(".accessible-megamenu-panel").hasClass("open"))) {
+            $(".accessible-megamenu .menu-hamburger").removeClass("open");
+            $("#navigation").removeClass("menu-open");
+          }
+        }
+      }  , 200 );
+    });
+
+    // Add ARIA roles and states to headings
+    $('.front #block-bean-header-logo a.site-logo').attr('role','heading').attr('aria-level','1');
+    $('strong.hero-title').attr('role','heading').attr('aria-level','2');
+    $('.accessible-megamenu .menu__link.menu-link-header').wrapInner('<span role="heading" aria-level="3"></span>');
+    $('.region-bottom h2.block-title, .region-bottom h3.block-title').attr('role','heading').attr('aria-level','3');
+
+    // Remove ARIA attributes on Mega Menu Panel
+    $('.accessible-megamenu-panel').removeAttr('aria-expanded').removeAttr('aria-hidden');
+    // $('.accessible-megamenu-panel-group > .menu__item.first .menu-link-header').attr('aria-label','Academics');
+
+    // Add the close button to the menu and add the close event to it
+/*
+    $(".accessible-megamenu-panel")
+      //.append('<div class="close"><a>Close the Menu</a></div>')
+      .find(".close a").click(function() {
+        $(this).closest(".accessible-megamenu-panel.open")
+          .removeClass("hover")
+          .removeClass("open")
+          .closest("#navigation")
+          .removeClass("menu-open");
+    });
+*/
+
+    // some addtional classes are needed to style the menu hover
+    $("#navigation").hover(
+      function() {
+        $(this).addClass("hover");
+      },
+      function() {
+        $(this).removeClass("hover");
+      }
+    );
+
+    // Accordion the footer menu in responsive
+    $('.footer-menu-block').click( function (e) {
+      if ($(window).width() < 768) {
+        $(this).find('.menu-block-wrapper').toggle("fast");
+      }
+    });
+    if ($(window).width() < 768) {
+      $('.footer-menu-block').click();
+    }
+
+    // Fix the resposive menu so that the search form wont block the top link
+    $('.mobile-menu-popout-link').on(clickEvent, function(e) {
+      $(this).toggleClass('expanded');
+
+      if ($(".search-block").hasClass("search-open") && $(this).hasClass('expanded')) {
+        $(".block.search-block .block-title").click();
+      }
+    });
+
+    $(".mobile-menu-close").on(clickEvent, function(e){
+      $("body.front").removeClass("menu-open");
+    });
+
+    $('.mobile-menu-popout-link').on(clickEvent, function(e) {
+      $(this).toggleClass('expanded');
+
+      if ($(".search-block").hasClass("search-open") && $(this).hasClass('expanded')) {
+        $(".block.search-block .block-title").click();
+      }
+    });
+
+    $('.mobile-menu-popout a.responsive-menu-sub-menu-title').each(function() {
+	    if ($(this).attr('href') == "undefined") {
+		    /*
+		    var $html = $(this).html();
+		    $('<h3>' + $html + '</h3>').insertBefore($(this));
+		    $(this).remove();
+		    */
+		    /*
+		    $(this).attr('href', '#').attr('aria-role', 'button').click(function(e) {
+			    e.preventDefault();
+			    $(this).blur();
+		    });
+		    */
+	    }
+    });
+  });
+
+  // Fix the broken jump to behavior of IE and Chrome
+  window.addEventListener("hashchange", function(event) {
+      var element = document.getElementById(location.hash.substring(1));
+      if (element) {
+          if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+              element.tabIndex = -1;
+          }
+          element.focus();
+      }
+  }, false);
+
+  //Chnage Tab order horizontal to verticle for multi column menus in navigation and footer
+  jQuery(document).ready(function($) {
+      container = jQuery('#navigation .multi-column-menu ul.menu');
+      split_menu_in_column(container, 4, 'li', 'menu-column');
+
+      container = jQuery('.region-bottom .multi-column-menu ul.menu');
+      split_menu_in_column(container, 2, 'li', 'menu-column');
+  });
+
+
+})(jQuery, Drupal, this, this.document);
+
+
+// Alter YouTube/Vimeo links with colorbox-load CSS class
+if(!String.alterVidLinks) {
+  String.prototype.alterVidLinks = function() {
+    var urlPattern = /www.youtube\.com\/watch\?v=([a-zA-Z0-9_\-]+)/gim;
+    var urlPattern2 = /youtu\.be\/([a-zA-Z0-9_\-]+)/gim;
+    var urlPattern3 = /\/\/vimeo\.com\/([a-zA-Z0-9_\-]+)/gim;
+    return this
+      .replace(urlPattern, 'www.youtube.com/embed/$1?autoplay=1&rel=0&modestbranding=0')
+      .replace(urlPattern2, 'www.youtube.com/embed/$1?autoplay=1&rel=0&modestbranding=0')
+      .replace(urlPattern3, 'player.vimeo.com/video/$1?iframe=true&autoplay=1');
+  };
+}
+
+// Function to Get Viewport Size
+function getViewportSize() {
+    var viewPortWidth;
+    var viewPortHeight;
+    // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+    if (typeof window.innerWidth != 'undefined') {
+      viewPortWidth = window.innerWidth,
+      viewPortHeight = window.innerHeight
+    }
+    // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+    else if (typeof document.documentElement != 'undefined'
+    && typeof document.documentElement.clientWidth !=
+    'undefined' && document.documentElement.clientWidth != 0) {
+        viewPortWidth = document.documentElement.clientWidth,
+        viewPortHeight = document.documentElement.clientHeight
+    }
+    // older versions of IE
+    else {
+        viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+        viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+    }
+    return [viewPortWidth, viewPortHeight];
+}
+
+// Load colorbox on page load
+/* jQuery(function($) {
+  var viewPortDim = getViewportSize();
+  var viewPortWidth = viewPortDim[0];
+  var cboxWidth = 854;
+  if (viewPortWidth < 1050) { cboxWidth = viewPortWidth * 0.8; }
+  if (viewPortWidth < 767) { cboxWidth = viewPortWidth * 0.9; }
+  var cboxHeight = cboxWidth * (9/16);
+  if ($(".cbox-load").length) {
+    $(".cbox-load").each(function( index ) {
+      var linkUrl = $(this).attr("href");
+      $(this).attr("href",linkUrl.alterVidLinks());
+      $(this).colorbox({
+        iframe: true,
+        innerWidth: cboxWidth,
+        innerHeight: cboxHeight
+      });
+    });
+  }
+}); */
+
+// Load colorbox on .cbox-load clicks
+jQuery(function($) {
+	//condition to remove autoplay=1 from vimeo url
+	if($(".media-vimeo-player").attr("src")){
+		var vimeoUrl = $(".media-vimeo-player").attr("src");
+		var newVimeoUrl = vimeoUrl.replace("autoplay=1", "autoplay=0");
+		$(".media-vimeo-player").attr("src", newVimeoUrl);
+	}
+  if ($(".cbox-load").length) {
+    $(".cbox-load").each(function( index ) {
+      var linkUrl = $(this).attr("href");
+      $(this).attr("href",linkUrl.alterVidLinks());
+    });
+  }
+  $( ".cbox-load" ).on( "click", function() {
+    var viewPortDim = getViewportSize();
+    var viewPortWidth = viewPortDim[0];
+    var cboxWidth = 854;
+    if (viewPortWidth < 1050) { cboxWidth = viewPortWidth * 0.8; }
+    if (viewPortWidth < 767) { cboxWidth = viewPortWidth * 0.9; }
+    var cboxHeight = cboxWidth * (9/16);
+    if (viewPortWidth >= 767) {
+      $(this).colorbox({
+        iframe: true,
+        innerWidth: cboxWidth,
+        innerHeight: cboxHeight
+      });
+    }
+  });
+
+});
+
+
+function split_menu_in_column(container, num_cols, listItem, listClass) {
+    container.each(function() {
+        var items_per_col = new Array(),
+        items = jQuery(this).find(listItem),
+        min_items_per_col = Math.floor(items.length / num_cols),
+        difference = items.length - (min_items_per_col * num_cols);
+        for (var i = 0; i < num_cols; i++) {
+            if (i < difference) {
+                items_per_col[i] = min_items_per_col + 1;
+            } else {
+                items_per_col[i] = min_items_per_col;
+            }
+        }
+        for (var i = 0; i < num_cols; i++) {
+            jQuery(this).append(jQuery('<ul ></ul>').addClass(listClass));
+            for (var j = 0; j < items_per_col[i]; j++) {
+                var pointer = 0;
+                for (var k = 0; k < i; k++) {
+                    pointer += items_per_col[k];
+                }
+                jQuery(this).find('.' + listClass).last().append(items[j + pointer]);
+            }
+        }
+    });
+}

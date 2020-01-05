@@ -1,0 +1,312 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Playfair Display SC', serif;
+}
+
+html {
+    background: url("https://wallpapercave.com/wp/FcF2xMV.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    outline: none;
+    border: none;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+
+select, input {
+    text-align: center;
+    text-align-last: center;
+}
+
+option {
+    text-align: center;
+}
+
+button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 150px;
+    height: 62px;
+    background-color: transparent;
+    border-radius: 31px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    background-color: #EBA91B;
+}
+
+form {
+    width: 100%;
+    display: block;
+    font-size: 30px;
+    color: #e8c517;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 145px;
+    margin: 0 auto;
+}
+
+#background_logo {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    background-image: url("https://www.logolynx.com/images/logolynx/0c/0c23f35a7edaf493e331dc9900d7741e.png");
+    background-position: center;
+    opacity: 0.4;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 5%;
+    z-index: -1;
+}
+
+input.input100, select {
+    height: 62px;
+    padding: 0 35px 0 35px;
+}
+
+input::-webkit-input-placeholder {
+    color: #EBA91B;
+    text-align: center;
+}
+
+input:-moz-placeholder {
+    color: #EBA91B;
+    text-align: center;
+}
+
+input::-moz-placeholder {
+    color: #EBA91B;
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    color: #EBA91B;
+    text-align: center;
+}
+
+.wrap-input100 {
+    width: 100%;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.input100 {
+    position: relative;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 31px;
+    opacity: 0.80;
+    font-size: 18px;
+    color: #EBA91B;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    border: 3px solid black;
+}
+
+.page_container {
+    min-height: 80vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.icon {
+    width: 30vh;
+    height: 30vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon_div {
+    position: absolute;
+    width: 100%;
+    height: 12vh;
+    top: -10000px;
+}
+
+#toTop {
+    padding: 5px 3px;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    display: none;
+    width: 10%;
+    height: 10%;
+    opacity: 0.75;
+}
+
+.contact100-form-title {
+    position: relative;
+    display: block;
+    color: #EBA91B;
+    margin: 5% auto 5% auto;
+    -webkit-text-stroke: 1.2px black;
+    font-size: 2em;
+    text-align: center;
+    align-content: center;
+    text-shadow: 10px 10px 5px black;
+    font-weight: 100;
+    transition: all 0.5s;
+    bottom: 5px;
+}
+
+.btn-group {
+    z-index: 10;
+}
+
+button.contact100-form-btn {
+    margin: 0 auto;
+}
+
+.btn {
+    opacity: 0.75;
+}
+
+.contact100-form-btn:hover {
+    background-color: #403866;
+    width: 40%;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+input[type=time]::-webkit-inner-spin-button {
+    cursor: pointer;
+    height: 50px;
+    margin: 11%;
+}
+
+input[type=time] {
+    padding-left: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    input:Before {
+        position: relative;
+        right: 0;
+    }
+
+    #background_logo {
+        top: 9%;
+        opacity: 0.5;
+    }
+}
+
+tr {
+    text-align: center;
+    border: 10px blue solid;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+th {
+    padding: 2%;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+span.contact100-form-title:hover {
+    text-shadow: 10px 10px 5px black;
+}
+
+span.contact100-form-title:hover {
+    text-shadow: 8px 8px 5px black;
+}
+
+button:hover {
+    background: rgba(235, 169, 27, 1);
+    box-shadow: 0px 0px 5px white;
+
+}
+
+
+div#overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.6;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+label {
+    float: left;
+    width: 50%;
+
+}
+
+
+.input100:hover, .input100:focus {
+    opacity: 1;
+    border-radius: 28px;
+}
+
+
+
+
+table.table {
+    width: 80%;
+    margin: -10% auto 0 auto;
+    border: 2px black dashed;
+}
+
+tbody tr:nth-child(even) {background: red;/* FONT-WEIGHT: 200; *//* FONT-WEIGHT: 200; */}

@@ -1,0 +1,14 @@
+(function($) {
+  Drupal.behaviors.skrollr_lib = {
+    attach: function(context, settings) {
+      $(function () {
+        if ($(window).width() > 768) {
+          //var s = skrollr.init();
+          if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+              var s = skrollr.init();
+          }          
+        }
+      });
+    }
+  };
+})(jQuery);

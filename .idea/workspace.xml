@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../django/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../django/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django/csulb/schedule/templates/final/test_files/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../django/csulb/schedule/templates/final/test_files/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django/csulb/schedule/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/csulb/schedule/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django/csulb/schedule/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/csulb/schedule/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rikwjbvg: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rikwjbvg: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rikwjbvg: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rikwjbvg: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rikwjbvg: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main_app_classesinfo: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rikwjbvg: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main_app_classrooms: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../django" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1VeGy3xgm8GvezZboYAovtLJaGY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/utilities" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/utilities/database_building/scraper.py" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\web_app\main_app" />
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\utilities" />
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\database_building" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\utilities" />
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\utilities\database_building" />
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\web_app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.db_executor (1)">
+    <configuration name="classrooms_scraper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_redo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities/database_building" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/classrooms_scraper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="connector" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_redo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities/database_building" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/connector.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dao_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_redo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities/database_building" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/dao_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db_executor (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_redo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities/database_building" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/db_executor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scraper_temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_redo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities/database_building" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/database_building/scraper_temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.db_executor (1)" />
+        <item itemvalue="Python.scraper_temp" />
+        <item itemvalue="Python.classrooms_scraper" />
+        <item itemvalue="Python.connector" />
+        <item itemvalue="Python.dao_test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@ec588b" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="" />
+      <created>1574028327425</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574028327425</updated>
+      <workItem from="1574028328783" duration="11304000" />
+      <workItem from="1574044544937" duration="1886000" />
+      <workItem from="1574048242521" duration="351000" />
+      <workItem from="1574136607504" duration="599000" />
+      <workItem from="1574184245523" duration="23000" />
+      <workItem from="1574201638420" duration="243000" />
+      <workItem from="1574235039466" duration="5022000" />
+      <workItem from="1574275071112" duration="11907000" />
+      <workItem from="1574360500744" duration="586000" />
+      <workItem from="1577606402117" duration="1702000" />
+      <workItem from="1577609201573" duration="3510000" />
+      <workItem from="1577665689658" duration="10251000" />
+      <workItem from="1577916116410" duration="13469000" />
+      <workItem from="1577997987687" duration="6430000" />
+      <workItem from="1578044055459" duration="3149000" />
+      <workItem from="1578101202812" duration="12102000" />
+      <workItem from="1578130619374" duration="6668000" />
+      <workItem from="1578168816307" duration="1034000" />
+      <workItem from="1578175069788" duration="5972000" />
+      <workItem from="1578197437372" duration="5628000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="872" y="177" key="#Notifications" timestamp="1577609158358">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="177" key="#Notifications/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577609158358" />
+    <state x="872" y="177" key="#Vim_Emulation" timestamp="1577609147862">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="177" key="#Vim_Emulation/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577609147862" />
+    <state x="872" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578021637750">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578021637750" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1577611063697">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577611063697" />
+    <state x="92" y="92" width="2376" height="856" key="DiffContextDialog" timestamp="1578022001800">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="92" y="92" width="2376" height="856" key="DiffContextDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578022001800" />
+    <state x="1059" y="273" key="FileChooserDialogImpl" timestamp="1578021766535">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578021766535" />
+    <state width="1792" height="255" key="GridCell.Tab.0.bottom" timestamp="1578215916380">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1792" height="255" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
+    <state width="1792" height="255" key="GridCell.Tab.0.center" timestamp="1578215916380">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1792" height="255" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
+    <state width="1792" height="255" key="GridCell.Tab.0.left" timestamp="1578215916380">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1792" height="255" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
+    <state width="1792" height="255" key="GridCell.Tab.0.right" timestamp="1578215916380">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="1792" height="255" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215916380" />
+    <state x="781" y="161" key="SettingsEditor" timestamp="1578044281608">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="781" y="161" key="SettingsEditor/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578044281608" />
+    <state x="1131" y="407" width="343" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1577672443479">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1131" y="407" width="343" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577672443479" />
+    <state x="1059" y="339" width="441" height="364" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1578126260081">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1059" y="339" width="441" height="364" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578126260081" />
+    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1578215706029">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215706029" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578197532327">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578197532327" />
+    <state x="887" y="67" width="785" height="906" key="find.popup" timestamp="1577669620934">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="887" y="67" width="785" height="906" key="find.popup/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577669620934" />
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1577611034256">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577611034256" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/project_redo$connector.coverage" NAME="connector Coverage Results" MODIFIED="1578135228527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$db_executor.coverage" NAME="db_executor Coverage Results" MODIFIED="1574043974577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project_redo$dad.coverage" NAME="dad Coverage Results" MODIFIED="1578047325356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
+    <SUITE FILE_PATH="coverage/project_redo$db_executor__1_.coverage" NAME="db_executor (1) Coverage Results" MODIFIED="1578215875377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1577672252168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/project_redo$classrooms_scraper.coverage" NAME="classrooms_scraper Coverage Results" MODIFIED="1578215377359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$dao_test.coverage" NAME="dao_test Coverage Results" MODIFIED="1578127734220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$scraper_temp.coverage" NAME="scraper_temp Coverage Results" MODIFIED="1578215822648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+  </component>
+</project>

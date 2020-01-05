@@ -1,0 +1,140 @@
+(function ($) {
+
+Drupal.jQueryUiFilter = Drupal.jQueryUiFilter || {}
+Drupal.jQueryUiFilter.faqOptions = Drupal.jQueryUiFilter.faqOptions || {}
+
+/**
+ * Scroll to an faq's active element.
+ */
+Drupal.jQueryUiFilter.faqScrollTo = function(faq) {
+  var options = $(faq).data('options') || {}
+  if (!options['scrollTo']) {
+    return;
+  }
+
+  if($(faq).find('.ui-state-active').length) {
+    var top = $(faq).find('.ui-state-active').offset().top;
+    if (options['scrollTo']['duration']) {
+      $('html, body').animate({scrollTop: top}, options['scrollTo']['duration']);
+    }
+    else {
+      $('html, body').scrollTop(top);
+    }
+  }
+}
+
+/**
+ * Faq change event handler to bookmark active element in location.hash.
+ */
+Drupal.jQueryUiFilter.faqChangeStart = function(event, ui) {
+  var href = ui.newHeader.find('a').attr('href');
+  if (href) {
+    location.hash = href;
+    return false; // Cancel event and let faqHashChangeEvent handler activate the element.
+  }
+  else {
+    return true;
+  }
+}
+
+/**
+ * On hash change activate and scroll to an faq element.
+ */
+Drupal.jQueryUiFilter.faqHashChangeEvent = function() {
+  // NOTE: FAQ 'Active' property not change'ing http://bugs.jqueryui.com/ticket/4576
+  $faqHeader = $('.ui-faq > .ui-faq-header:has(a[href="' + location.hash + '"])')
+  $faq = $faqHeader.parent();
+  var index = $faqHeader.prevAll('.ui-faq-header').length;
+  $faq.accordion('activate', index).get(0).scrollIntoView();
+}
+
+/**
+ * jQuery UI filter faq behavior.
+ */
+Drupal.behaviors.jQueryUiFilterFaq  = {attach: function(context) {
+  if (Drupal.settings.jQueryUiFilter.disabled) {
+    return;
+  }
+
+  var headerTag = Drupal.settings.jQueryUiFilter.faqHeaderTag;
+
+  $('div.jquery-ui-filter-faq', context).once('jquery-ui-filter-faq', function () {
+    var options = Drupal.jQueryUiFilter.getOptions('faq');
+	options.beforeActivate =  function (event, ui) {
+                // The accordion believes a panel is being opened
+                if (ui.newHeader[0]) {
+                    var currHeader = ui.newHeader;
+                    var currContent = currHeader.next('.ui-accordion-content');
+                    // The accordion believes a panel is being closed
+                } else {
+                    var currHeader = ui.oldHeader;
+                    var currContent = currHeader.next('.ui-accordion-content');
+                }
+                // Since we've changed the default behavior, this detects the actual status
+                var isPanelSelected = currHeader.attr('aria-selected') == 'true';
+
+                // Toggle the panel's header
+                currHeader.toggleClass('ui-corner-all', isPanelSelected).toggleClass('accordion-header-active ui-state-active ui-corner-top', !isPanelSelected).attr('aria-selected', ((!isPanelSelected).toString()));
+
+                // Toggle the panel's icon
+                currHeader.children('.ui-icon').toggleClass('ui-icon-triangle-1-e', isPanelSelected).toggleClass('ui-icon-triangle-1-s', !isPanelSelected);
+
+                // Toggle the panel's content
+                currContent.toggleClass('accordion-content-active', !isPanelSelected)
+                if (isPanelSelected) {
+                    currContent.slideUp();
+                } else {
+                    currContent.slideDown();
+                }
+
+                return false; // Cancel the default action
+            }
+		options.blind= false;
+    var heightStyle = (options.autoheight == 1) ? 'auto' : (options.fillspace == 1 ? 'fill' : 'content');
+    options.heightStyle = heightStyle;
+
+    // Look for jQuery UI filter header class.
+    options['header'] = '.jquery-ui-filter-faq-header';
+
+    if ($(this).hasClass('jquery-ui-filter-faq-collapsed')) { // Set collapsed options
+      options['collapsible'] = true;
+      options['active'] = true;
+    }
+
+    // Convert <h*> to div to remove tag and insure the faq does not use the existing h3 style.
+    // Sets active item based on location.hash.
+    var index = 0;
+    $(this).find(headerTag + '.jquery-ui-filter-faq-header').each(function(){
+      var id = this.id || $(this).text().toLowerCase().replace(/[^-a-z0-9]+/gm, '-');
+      var hash = '#' + id;
+      if (hash == location.hash) {
+        options['active'] = index;
+      }
+      index++;
+
+      $(this).replaceWith('<div class="jquery-ui-filter-header jquery-ui-filter-faq-header"><a href="' + hash + '">' + $(this).html() + '</a></div>');
+    });
+
+    // DEBUG:
+    // console.log(options);
+    // Save options as data and init faq
+    $(this).data('options', options).accordion(options);
+
+    // Scroll to active
+    Drupal.jQueryUiFilter.faqScrollTo(this);
+
+    // Bind faq change event to record history
+    if (options['history']) {
+      $(this).bind('faqchangestart', Drupal.jQueryUiFilter.faqChangeStart);
+    }
+
+    // Init hash change event handling once
+    if (!Drupal.jQueryUiFilter.faqInitialized) {
+      Drupal.jQueryUiFilter.hashChange(Drupal.jQueryUiFilter.faqHashChangeEvent);
+    }
+    Drupal.jQueryUiFilter.faqInitialized = true;
+  });
+
+}}
+
+})(jQuery);

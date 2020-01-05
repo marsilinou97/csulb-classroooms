@@ -1,0 +1,1 @@
+( '2881', 'TuTh', '10:00:00', '11:50:00', '', 'Hashem I', 'AS', '241', 'SEM', 'FUNDAMENTALS OF ARABIC'),( '4479', 'TuTh', '14:00:00', '15:50:00', '', 'Hashem I', 'AS', '241', 'SEM', 'INTERMEDIATE ARABIC'),
