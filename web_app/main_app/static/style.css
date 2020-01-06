@@ -7,16 +7,21 @@
     font-family: 'Playfair Display SC', serif;
 }
 
-html {
-    background: url("https://wallpapercave.com/wp/FcF2xMV.jpg") no-repeat center center fixed;
+#background_image {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    /*background-image: url("https://www.logolynx.com/images/logolynx/0c/0c23f35a7edaf493e331dc9900d7741e.png");*/
+    background-image: url("bg_70_4_80_1_70.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-    outline: none;
-    border: none;
-    overflow: hidden;
-    height: 100%;
+    background-repeat: no-repeat;
+    /*opacity: 0.4;*/
+    z-index: -2;
 }
 
 body {
@@ -82,7 +87,8 @@ form {
     width: 100%;
     overflow: hidden;
     position: fixed;
-    background-image: url("https://www.logolynx.com/images/logolynx/0c/0c23f35a7edaf493e331dc9900d7741e.png");
+    /*background-image: url("https://www.logolynx.com/images/logolynx/0c/0c23f35a7edaf493e331dc9900d7741e.png");*/
+    background-image: url("logo_60.png");
     background-position: center;
     opacity: 0.4;
     background-size: contain;
@@ -301,12 +307,15 @@ label {
 }
 
 
-
-
 table.table {
     width: 80%;
-    margin: -10% auto 0 auto;
+    margin: 0 auto 0 auto;
     border: 2px black dashed;
 }
 
-tbody tr:nth-child(even) {background: red;/* FONT-WEIGHT: 200; *//* FONT-WEIGHT: 200; */}
+tbody tr:nth-child(even) {
+    background: rgba(184, 119, 0, 0.7);
+    color: #e8c517;
+    FONT-WEIGHT: 200;
+    FONT-WEIGHT: 200;
+}

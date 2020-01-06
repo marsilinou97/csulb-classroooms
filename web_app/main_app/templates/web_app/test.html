@@ -1,78 +1,66 @@
 {%load static%}
+<html>
+   <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+      <title>test</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <link href="{%static 'style.css'%}" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div id="background_image"></div>
+      <div id="background_logo"></div>
+      <div id="overlay"></div>
+      <div class="page_container">
+         <div class="wrap-contact100">
 
-<html class="gr__127_0_0_1">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
-</head>
-
-
-<body>
-<div id="background_logo"></div>
-
-<div id="overlay"></div>
-
-<div class="page_container">
-    <div class="wrap-contact100">
-        <form method="POST" action="" class="contact100-form validate-form">
-            {% csrf_token %}
-         <span class="contact100-form-title">
-         Find An Empty Classroom
-         </span>
-            <div id="roomcont">
-                <div class="wrap-input100">
-                    <label for="room_number">Room number</label>
-                    <input autocomplete="off" class="input100" type="text" name="room_number" id="room_number"
-                           placeholder="Room #">
-                </div>
-                <div class="wrap-input100">
-                    <label for="building">Building</label>
-                    <input list="buildings_list" required="" class="input100" name="building" id="building" >
-                    <datalist  id="buildings_list">
-                                                {% for b in buildings %}
+            <form class="contact100-form validate-form" method="POST"> {% csrf_token %}
+               <span class="contact100-form-title">
+               Find An Empty Classroom
+               </span>
+               <div id="roomcont">
+                  <div class="wrap-input100">
+                     <label for="room_number">Room number</label>
+                     <input autocomplete="off" class="input100" id="room_number" name="room_number" placeholder="Room #"
+                        type="text">
+                  </div>
+                  <div class="wrap-input100">
+                     <label for="buildings">Building</label>
+                     <select class="input100" id="buildings" name="building">
+                        {% for b in buildings %}
                         <option class="input100" value="{{b.0}}">{{b.0}}</option>
                         {% endfor %}
-                    </datalist>
-                </div>
-            </div>
-            <div id="time">
-                <div class="wrap-input100" id="from">
-                    <label for="start_time">Start time</label>
-                    <input autocomplete="off" class="input100" type="time" name="start_time" placeholder="From"
-                           id="start_time">
-                </div>
-                <div class="wrap-input100" id="to">
-                    <label for="end_time">End time</label>
-                    <input autocomplete="off" class="input100" type="time" name="end_time" placeholder="To"
-                           id="end_time">
-                </div>
-                <div class="wrap-input100">
-                    <label for="day">Day</label>
-                    <select class="input100" id="day" name="day">
-                        <option value="Day" disabled="" selected="true">Day</option>
+                     </select>
+                  </div>
+               </div>
+               <div id="time">
+                  <div class="wrap-input100" id="from">
+                     <label for="start_time">Start time</label>
+                     <input autocomplete="off" class="input100" id="start_time" name="start_time" placeholder="From"
+                        type="time">
+                  </div>
+                  <div class="wrap-input100" id="to">
+                     <label for="end_time">End time</label>
+                     <input autocomplete="off" class="input100" id="end_time" name="end_time" placeholder="To"
+                        type="time">
+                  </div>
+                  <div class="wrap-input100">
+                     <label for="day">Day</label>
+                     <select class="input100" id="day" name="day">
+                        <option disabled="" selected="true" value="Day">Day</option>
                         {% for day in days %}
-                            <option value="{{day}}">{{day}}</option>
+                        <option value="{{day}}">{{day}}</option>
                         {% endfor %}
-                    </select>
-                </div>
-            </div>
-            <button style="width: 50%;" onclick="submit">Submit</button>
-        </form>
-
-        <section>
-
-
-        </section>
-
-
-    </div>
-</div>
-<!--table-->
-{% if results %}
-    {% include 'web_app/results_table.html' %}
-{% endif %}
-
-</body>
+                     </select>
+                  </div>
+               </div>
+               <button onclick="submit" style="width: 50%;">Submit</button>
+            </form>
+            <section>
+            </section>
+         </div>
+      </div>
+      <!--table-->
+      {% if results %}
+      {% include 'web_app/results_table.html' %}
+      {% endif %}
+   </body>

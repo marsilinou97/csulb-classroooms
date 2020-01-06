@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/db_executor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233/storage_v2/_src_/database/rikwjbvg.TG4Jsg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233/storage_v2/_src_/database/rikwjbvg.TG4Jsg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/database_building/courses_info_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/courses_info_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/DAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/DAO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0002_classesinfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0003_auto_20191229_1843.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0004_auto_20200102_1646.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0005_classessessions_room_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/templates/web_app/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/templates/web_app/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +122,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/utilities" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_app/main_app/templates/web_app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -122,11 +136,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\web_app\main_app\static" />
       <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\web_app\main_app" />
       <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\utilities" />
       <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\database_building" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\web_app\main_app\templates\web_app" />
       <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\utilities" />
       <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\utilities\database_building" />
       <recent name="C:\Users\marsi\Dropbox\csulbClasses\project_redo\web_app" />
@@ -258,7 +274,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@75b41e83" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -296,7 +322,8 @@
       <workItem from="1578168816307" duration="1034000" />
       <workItem from="1578175069788" duration="5972000" />
       <workItem from="1578197437372" duration="7418000" />
-      <workItem from="1578218295953" duration="1596000" />
+      <workItem from="1578218295953" duration="4194000" />
+      <workItem from="1578261780294" duration="19267000" />
     </task>
     <servers />
   </component>
@@ -328,70 +355,78 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="92" y="92" width="2376" height="856" key="DiffContextDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578022001800" />
-    <state x="1059" y="273" key="FileChooserDialogImpl" timestamp="1578021766535">
+    <state x="1059" y="273" key="FileChooserDialogImpl" timestamp="1578220418819">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578021766535" />
-    <state width="1257" height="281" key="GridCell.Tab.0.bottom" timestamp="1578219192584">
+    <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578220418819" />
+    <state width="1257" height="281" key="GridCell.Tab.0.bottom" timestamp="1578298230080">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
-    <state width="1257" height="281" key="GridCell.Tab.0.center" timestamp="1578219192584">
+    <state width="1257" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230080" />
+    <state width="1257" height="281" key="GridCell.Tab.0.center" timestamp="1578298230080">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
-    <state width="1257" height="281" key="GridCell.Tab.0.left" timestamp="1578219192584">
+    <state width="1257" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230080" />
+    <state width="1257" height="281" key="GridCell.Tab.0.left" timestamp="1578298230079">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
-    <state width="1257" height="281" key="GridCell.Tab.0.right" timestamp="1578219192584">
+    <state width="1257" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230079" />
+    <state width="1257" height="281" key="GridCell.Tab.0.right" timestamp="1578298230080">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219192584" />
-    <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1578219150236">
+    <state width="1257" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230080" />
+    <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1578222909025">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1258" height="348" key="GridCell.Tab.1.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
-    <state width="1258" height="348" key="GridCell.Tab.1.center" timestamp="1578219150236">
+    <state width="1258" height="348" key="GridCell.Tab.1.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578222909025" />
+    <state width="1258" height="348" key="GridCell.Tab.1.center" timestamp="1578222909025">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1258" height="348" key="GridCell.Tab.1.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
-    <state width="1258" height="348" key="GridCell.Tab.1.left" timestamp="1578219150236">
+    <state width="1258" height="348" key="GridCell.Tab.1.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578222909025" />
+    <state width="1258" height="348" key="GridCell.Tab.1.left" timestamp="1578222909025">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1258" height="348" key="GridCell.Tab.1.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
-    <state width="1258" height="348" key="GridCell.Tab.1.right" timestamp="1578219150236">
+    <state width="1258" height="348" key="GridCell.Tab.1.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578222909025" />
+    <state width="1258" height="348" key="GridCell.Tab.1.right" timestamp="1578222909025">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1258" height="348" key="GridCell.Tab.1.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578219150236" />
+    <state width="1258" height="348" key="GridCell.Tab.1.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578222909025" />
     <state x="781" y="161" key="SettingsEditor" timestamp="1578044281608">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="781" y="161" key="SettingsEditor/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578044281608" />
-    <state x="1131" y="407" width="343" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1577672443479">
+    <state x="839" y="407" width="635" height="458" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1578294632033">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1131" y="407" width="343" height="242" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577672443479" />
+    <state x="839" y="407" width="635" height="458" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578294632033" />
+    <state x="860" y="173" key="com.intellij.database.dbimport.ImportDialog" timestamp="1578287701669">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="860" y="173" key="com.intellij.database.dbimport.ImportDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578287701669" />
+    <state x="1010" y="323" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1578287677010">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1010" y="323" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578287677010" />
     <state x="1059" y="339" width="441" height="364" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1578126260081">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1059" y="339" width="441" height="364" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578126260081" />
-    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1578215706029">
+    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1578286213669">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578215706029" />
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578218296276">
+    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578286213669" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578261781189">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578218296276" />
-    <state x="887" y="67" width="785" height="906" key="find.popup" timestamp="1577669620934">
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578261781188" />
+    <state x="887" y="67" width="785" height="906" key="find.popup" timestamp="1578295062806">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="887" y="67" width="785" height="906" key="find.popup/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577669620934" />
-    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1577611034256">
+    <state x="887" y="67" width="785" height="906" key="find.popup/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578295062806" />
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1578295216266">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577611034256" />
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578295216266" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/project_redo$connector.coverage" NAME="connector Coverage Results" MODIFIED="1578135228527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
@@ -400,7 +435,7 @@
     <SUITE FILE_PATH="coverage/project_redo$db_executor__1_.coverage" NAME="db_executor (1) Coverage Results" MODIFIED="1578218877293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1577672252168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_redo$helper_methods.coverage" NAME="helper_methods Coverage Results" MODIFIED="1578219187113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
-    <SUITE FILE_PATH="coverage/project_redo$classrooms_scraper.coverage" NAME="classrooms_scraper Coverage Results" MODIFIED="1578219192579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$classrooms_scraper.coverage" NAME="classrooms_scraper Coverage Results" MODIFIED="1578298223742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$dao_test.coverage" NAME="dao_test Coverage Results" MODIFIED="1578127734220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$scraper_temp.coverage" NAME="scraper_temp Coverage Results" MODIFIED="1578215822648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
   </component>

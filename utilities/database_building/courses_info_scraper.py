@@ -102,11 +102,12 @@ def subject_parser(subject):
 
 
 def main():
+    semester = "Fall_2019"
     try:
         con.make_connection()
         # Find all subjects' links
         resp = session.get(
-            "http://web.csulb.edu/depts/enrollment/registration/class_schedule/Fall_2019/By_Subject/").html
+            f"http://web.csulb.edu/depts/enrollment/registration/class_schedule/{semester}/By_Subject/").html
         subjects = [list(subject.find('a', first=True).links)[0] for subject in resp.find("#pageContent li")]
         start = time.time()
         with cf.ThreadPoolExecutor(THREADS) as ex:
