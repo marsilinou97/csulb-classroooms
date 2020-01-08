@@ -18,11 +18,21 @@ def feedback(request):
     return render(request, 'web_app/feedback.html')
 
 
+global buildings
+buildings = dict()
+
+
 def test(request):
+    global buildings
     finalTime = []
     currentDT = datetime.now()
     week_days = {'Monday': 'M', 'Tuesday': 'Tu', 'Wednesday': 'W', 'Thursday': 'Th', 'Friday': 'F'}
-    buildings = connector.get_buildings()
+    if not buildings:
+        print("We have to fetch buildings from db :/")
+        buildings = connector.get_buildings()
+    else:
+        print("We have buildings stored yaaaay!")
+
 
     if request.method == 'POST':
         form = QueryForm(request.POST)

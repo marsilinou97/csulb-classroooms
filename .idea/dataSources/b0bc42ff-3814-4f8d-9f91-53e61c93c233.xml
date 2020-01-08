@@ -14207,8 +14207,8 @@
       <Owner>rikwjbvg</Owner>
       <IntrospectionStateNumber>56151279</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|2590498|2590500|1
-sequence|table|2592766|2592758|1
+      <Relations>sequence|table|2592766|2592758|1
+sequence|table|2590498|2590500|1
 </Relations>
     </database>
     <database id="3552" parent="1" name="rinphovz">

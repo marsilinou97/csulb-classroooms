@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233/storage_v2/_src_/database/rikwjbvg.TG4Jsg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233/storage_v2/_src_/database/rikwjbvg.TG4Jsg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/database_building/courses_info_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/database_building/courses_info_scraper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/main_app/DAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/DAO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0002_classesinfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0003_auto_20191229_1843.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0004_auto_20200102_1646.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/0005_classessessions_room_id.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/main_app/templates/web_app/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/templates/web_app/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/views.py" afterDir="false" />
     </list>
@@ -274,17 +264,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@75b41e83" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -323,7 +303,8 @@
       <workItem from="1578175069788" duration="5972000" />
       <workItem from="1578197437372" duration="7418000" />
       <workItem from="1578218295953" duration="4194000" />
-      <workItem from="1578261780294" duration="19267000" />
+      <workItem from="1578261780294" duration="25873000" />
+      <workItem from="1578454411704" duration="3091000" />
     </task>
     <servers />
   </component>
@@ -359,22 +340,22 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578220418819" />
-    <state width="1257" height="281" key="GridCell.Tab.0.bottom" timestamp="1578298230080">
+    <state width="2517" height="281" key="GridCell.Tab.0.bottom" timestamp="1578301942768">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230080" />
-    <state width="1257" height="281" key="GridCell.Tab.0.center" timestamp="1578298230080">
+    <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
+    <state width="2517" height="281" key="GridCell.Tab.0.center" timestamp="1578301942768">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230080" />
-    <state width="1257" height="281" key="GridCell.Tab.0.left" timestamp="1578298230079">
+    <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
+    <state width="2517" height="281" key="GridCell.Tab.0.left" timestamp="1578301942768">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230079" />
-    <state width="1257" height="281" key="GridCell.Tab.0.right" timestamp="1578298230080">
+    <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
+    <state width="2517" height="281" key="GridCell.Tab.0.right" timestamp="1578301942768">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1257" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578298230080" />
+    <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
     <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1578222909025">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -391,10 +372,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="1258" height="348" key="GridCell.Tab.1.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578222909025" />
-    <state x="781" y="161" key="SettingsEditor" timestamp="1578044281608">
+    <state x="781" y="161" key="SettingsEditor" timestamp="1578334361779">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="781" y="161" key="SettingsEditor/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578044281608" />
+    <state x="781" y="161" key="SettingsEditor/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578334361779" />
     <state x="839" y="407" width="635" height="458" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1578294632033">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -415,10 +396,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578286213669" />
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578261781189">
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578454412320">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578261781188" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578454412320" />
     <state x="887" y="67" width="785" height="906" key="find.popup" timestamp="1578295062806">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
