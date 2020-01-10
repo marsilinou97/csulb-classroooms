@@ -79,10 +79,10 @@ def test(request):
                               'days': week_days,
                           })
 
-
     else:
         return render(request, 'web_app/test.html',
                       {
                           'buildings': buildings,
                           'days': week_days
                       })
+

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/DAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/DAO.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app/main_app/templates/web_app/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/templates/web_app/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +261,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2372379e" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -304,7 +311,8 @@
       <workItem from="1578197437372" duration="7418000" />
       <workItem from="1578218295953" duration="4194000" />
       <workItem from="1578261780294" duration="25873000" />
-      <workItem from="1578454411704" duration="3091000" />
+      <workItem from="1578454411704" duration="4587000" />
+      <workItem from="1578613088457" duration="1944000" />
     </task>
     <servers />
   </component>
@@ -340,22 +348,22 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578220418819" />
-    <state width="2517" height="281" key="GridCell.Tab.0.bottom" timestamp="1578301942768">
+    <state width="2517" height="281" key="GridCell.Tab.0.bottom" timestamp="1578615103192">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
-    <state width="2517" height="281" key="GridCell.Tab.0.center" timestamp="1578301942768">
+    <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
+    <state width="2517" height="281" key="GridCell.Tab.0.center" timestamp="1578615103192">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
-    <state width="2517" height="281" key="GridCell.Tab.0.left" timestamp="1578301942768">
+    <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
+    <state width="2517" height="281" key="GridCell.Tab.0.left" timestamp="1578615103192">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
-    <state width="2517" height="281" key="GridCell.Tab.0.right" timestamp="1578301942768">
+    <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
+    <state width="2517" height="281" key="GridCell.Tab.0.right" timestamp="1578615103192">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578301942768" />
+    <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
     <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1578222909025">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -392,14 +400,14 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1059" y="339" width="441" height="364" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578126260081" />
-    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1578286213669">
+    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1578614920478">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578286213669" />
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578454412320">
+    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578614920478" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578613560525">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578454412320" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578613560525" />
     <state x="887" y="67" width="785" height="906" key="find.popup" timestamp="1578295062806">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -416,7 +424,7 @@
     <SUITE FILE_PATH="coverage/project_redo$db_executor__1_.coverage" NAME="db_executor (1) Coverage Results" MODIFIED="1578218877293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1577672252168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/project_redo$helper_methods.coverage" NAME="helper_methods Coverage Results" MODIFIED="1578219187113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
-    <SUITE FILE_PATH="coverage/project_redo$classrooms_scraper.coverage" NAME="classrooms_scraper Coverage Results" MODIFIED="1578298223742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
+    <SUITE FILE_PATH="coverage/project_redo$classrooms_scraper.coverage" NAME="classrooms_scraper Coverage Results" MODIFIED="1578614699757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$dao_test.coverage" NAME="dao_test Coverage Results" MODIFIED="1578127734220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
     <SUITE FILE_PATH="coverage/project_redo$scraper_temp.coverage" NAME="scraper_temp Coverage Results" MODIFIED="1578215822648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities/database_building" />
   </component>
