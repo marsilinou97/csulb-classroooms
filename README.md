@@ -1,6 +1,8 @@
 # CSULB Classroom Finder 
 Parts and functionalities the program support: 
-- There are two web crawlers, the first scrapes the data needed such as class start time, class end time, location for all the classes offered during a given semester from the school's schedule website and store them in a database. The second finds all the rooms and buildings in the university and stores them in the database. 
+- There are two web crawlers, 
+-- The first scrapes the data needed such as class start time, class end time, location for all the classes offered during a given semester from the school's schedule website and store them in a database. 
+-- The second finds all the rooms and buildings in the university and stores them in the database. 
 - Django app that helps students to find a classroom/lab to study at the time and location of their convince across the campus using the data from the database.
 
 TODO: 
