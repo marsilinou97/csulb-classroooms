@@ -1,2 +1,3 @@
-# csulb_classroom_finder
+# CSULB Classroom Finder 
+
  
