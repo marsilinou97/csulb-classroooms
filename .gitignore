@@ -2,3 +2,4 @@
 refrences
 pyvenv.cfg
 web_app/main_app/__pycache__
+*.pyc
