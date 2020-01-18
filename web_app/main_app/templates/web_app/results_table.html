@@ -1,18 +1,22 @@
-<table class="table">
-    <thead class="thead-dark">
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">Room</th>
-    </tr>
-    </thead>
-    <tbody>
+{% if schedule %}
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Room</th>
+        </tr>
+        </thead>
+        <tbody>
 
-    {% for x in schedule %}
-    <tr>
-        <th scope="row">{{ forloop.counter }}</th>
-        <th> {{ x.0 }}</th>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>
+        {% for x in schedule %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <th> {{ x.0 }}</th>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <h2 class="no_results">Unfortunately there is no results to your search :/</h2>
+{% endif %}
 

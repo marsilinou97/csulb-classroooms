@@ -1,78 +1,40 @@
 from django.db import connection
 
 
-# from . models import ClassesInfo
-
 class database_access_object(object):
     def __init__(self):
         pass
-        #self.curr = connection.cursor()
 
-    def executeQuery(self, q):
+    def execute_query(self, query, parameters=None):
         with connection.cursor() as curr:
-            curr.execute(q)
+            curr.execute(query, parameters)
             return curr.fetchall()
 
     def get_buildings(self):
-        return self.executeQuery(f'''
-                        SELECT DISTINCT building
-                            FROM main_app_classrooms 
-                            WHERE building NOT IN ('TBA', 'ONLINE')
-                            ORDER BY building
+        query = (f'''
+                        SELECT DISTINCT BUILDING
+                            FROM MAIN_APP_CLASSROOMS 
+                            WHERE BUILDING NOT IN ('TBA', 'ONLINE')
+                            ORDER BY BUILDING
                             ''')
-##        c = self.curr.execute(f'''
-##                        SELECT DISTINCT building
-##                            FROM main_app_classrooms
-##                            WHERE building NOT IN ('TBA', 'ONLINE')
-##                            ORDER BY building
-##                            ''')
-##        return self.curr.fetchall()
+        return self.execute_query(query)
 
-    def get_rooms(self, start_time='%', end_time='%', day='%', room_number='%', building='%'):
-        return self.executeQuery(f'''
-                        SELECT R.building || ' ' || R.room_num
-                                                FROM MAIN_APP_CLASSROOMS R
-                                                WHERE NOT exists
-                                                    (
-                                                        SELECT 1
-                                                        FROM MAIN_APP_CLASSESINFO C
-                                                        WHERE C.ROOM_NUM = R.ID
-                                                          AND TO_TIMESTAMP(C.START_TIME, 'HH24:MI:SS')::TIME < '{end_time}'::TIME
-                                                          AND TO_TIMESTAMP(C.END_TIME, 'HH24:MI:SS')::TIME > '{start_time}'::TIME
-                                                          AND C.CLASS_DAYS LIKE '%{day}%'
-                                                    )
-                                                  AND BUILDING = '{building}'
-                                                ORDER BY room_num;
-                                ''')
-##        print(f'''                        SELECT R.building || ' ' || R.room_num
-##                        FROM MAIN_APP_CLASSROOMS R
-##                        WHERE NOT exists
-##                            (
-##                                SELECT 1
-##                                FROM MAIN_APP_CLASSESINFO C
-##                                WHERE C.ROOM_NUM = R.ID
-##                                  AND TO_TIMESTAMP(C.START_TIME, 'HH24:MI:SS')::TIME < '{end_time}'::TIME
-##                                  AND TO_TIMESTAMP(C.END_TIME, 'HH24:MI:SS')::TIME > '{start_time}'::TIME
-##                                  AND C.CLASS_DAYS LIKE '%{day}%'
-##                            )
-##                          AND BUILDING = '{building}';''')
-##
-##        c = self.curr.execute(f'''
-##                        SELECT R.building || ' ' || R.room_num
-##                        FROM MAIN_APP_CLASSROOMS R
-##                        WHERE NOT exists
-##                            (
-##                                SELECT 1
-##                                FROM MAIN_APP_CLASSESINFO C
-##                                WHERE C.ROOM_NUM = R.ID
-##                                  AND TO_TIMESTAMP(C.START_TIME, 'HH24:MI:SS')::TIME < '{end_time}'::TIME
-##                                  AND TO_TIMESTAMP(C.END_TIME, 'HH24:MI:SS')::TIME > '{start_time}'::TIME
-##                                  AND C.CLASS_DAYS LIKE '%{day}%'
-##                            )
-##                          AND BUILDING = '{building}'
-##                        ORDER BY room_num;
-##                            ''')
-##        res = self.curr.fetchall()
-##        print("\n\n\n")
-##        print(res)
-##        return res
+    def get_rooms(self, start_time=None, end_time=None, day=None, room_number=None, building=None):
+        parameters = dict(start_time=start_time, end_time=end_time, day=day, room_number=room_number, building=building)
+        query = ('''
+                                SELECT DISTINCT R.BUILDING || ' ' || R.ROOM_NUM
+                                FROM MAIN_APP_CLASSROOMS R
+                                         INNER JOIN MAIN_APP_CLASSESINFO C ON C.ROOM_NUM = R.ID
+                                WHERE START_TIME IS NOT NULL
+                                  AND NOT EXISTS
+                                    (SELECT NULL
+                                     FROM MAIN_APP_CLASSESINFO C2
+                                     WHERE C2.ROOM_NUM = R.ID
+                                       AND C2.START_TIME  > %(start_time)s :: TIME
+                                       AND C2.START_TIME  < %(end_time)s :: TIME
+                                       AND R.ROOM_NUM LIKE %(room_number)s)
+                                  AND CLASS_DAYS LIKE %(day)s
+                                  AND BUILDING = %(building)s
+                                  AND R.ROOM_NUM LIKE %(room_number)s;
+                ''')
+        return self.execute_query(query, parameters)

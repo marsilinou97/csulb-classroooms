@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'web_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rikwjbvg',
-        'USER': 'rikwjbvg',
-        'PASSWORD': 'PTmEK_y0-uyC3kRIbWwLlihyUQZYUtA-',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_NAME'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': 'salt.db.elephantsql.com',
         'PORT': '5432'
     }

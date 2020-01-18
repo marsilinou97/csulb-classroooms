@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1592e54e-d4fe-4a98-a748-3beb6b4a71b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_app/main_app/templates/web_app/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233/storage_v2/_src_/database/rikwjbvg.TG4Jsg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b0bc42ff-3814-4f8d-9f91-53e61c93c233/storage_v2/_src_/database/rikwjbvg.TG4Jsg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_query.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/DAO.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/DAO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/templates/web_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/templates/web_app/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/templates/web_app/results_table.html" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/templates/web_app/results_table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/templates/web_app/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/main_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_app/web_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app/web_app/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,24 +85,14 @@
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main_app_classesinfo: table" type="69fad909:PgImplModel$LocalTable" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="rikwjbvg@salt.db.elephantsql.com" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="rikwjbvg: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main_app_classrooms: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -109,7 +113,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_app/main_app/templates/web_app" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -261,23 +265,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:rikwjbvg@salt.db.elephantsql.com" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@2372379e" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
       </list>
     </option>
-    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -313,6 +306,8 @@
       <workItem from="1578261780294" duration="25873000" />
       <workItem from="1578454411704" duration="4587000" />
       <workItem from="1578613088457" duration="1944000" />
+      <workItem from="1579291691485" duration="25553000" />
+      <workItem from="1579320150159" duration="676000" />
     </task>
     <servers />
   </component>
@@ -324,6 +319,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="872" y="177" key="#Notifications/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1577609158358" />
+    <state x="872" y="176" key="#SQL_Dialects" timestamp="1579300922463">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="176" key="#SQL_Dialects/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579300922463" />
     <state x="872" y="177" key="#Vim_Emulation" timestamp="1577609147862">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -344,26 +343,30 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="92" y="92" width="2376" height="856" key="DiffContextDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578022001800" />
-    <state x="1059" y="273" key="FileChooserDialogImpl" timestamp="1578220418819">
+    <state x="1059" y="273" key="FileChooserDialogImpl" timestamp="1579298643907">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578220418819" />
-    <state width="2517" height="281" key="GridCell.Tab.0.bottom" timestamp="1578615103192">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="1059" y="273" key="FileChooserDialogImpl/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579298643907" />
+    <state width="2488" height="255" key="GridCell.Tab.0.bottom" timestamp="1579303056152">
+      <screen x="-2560" y="-218" width="2560" height="1400" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
-    <state width="2517" height="281" key="GridCell.Tab.0.center" timestamp="1578615103192">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="2488" height="255" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@-2560.-218.2560.1400" timestamp="1579303056152" />
+    <state width="2488" height="255" key="GridCell.Tab.0.bottom/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579300547642" />
+    <state width="2488" height="255" key="GridCell.Tab.0.center" timestamp="1579303056152">
+      <screen x="-2560" y="-218" width="2560" height="1400" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
-    <state width="2517" height="281" key="GridCell.Tab.0.left" timestamp="1578615103192">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="2488" height="255" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@-2560.-218.2560.1400" timestamp="1579303056152" />
+    <state width="2488" height="255" key="GridCell.Tab.0.center/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579300547642" />
+    <state width="2488" height="255" key="GridCell.Tab.0.left" timestamp="1579303056152">
+      <screen x="-2560" y="-218" width="2560" height="1400" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
-    <state width="2517" height="281" key="GridCell.Tab.0.right" timestamp="1578615103192">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="2488" height="255" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@-2560.-218.2560.1400" timestamp="1579303056152" />
+    <state width="2488" height="255" key="GridCell.Tab.0.left/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579300547642" />
+    <state width="2488" height="255" key="GridCell.Tab.0.right" timestamp="1579303056152">
+      <screen x="-2560" y="-218" width="2560" height="1400" />
     </state>
-    <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578615103192" />
+    <state width="2488" height="255" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@-2560.-218.2560.1400" timestamp="1579303056152" />
+    <state width="2488" height="255" key="GridCell.Tab.0.right/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579300547642" />
     <state width="1258" height="348" key="GridCell.Tab.1.bottom" timestamp="1578222909025">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -384,30 +387,30 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="781" y="161" key="SettingsEditor/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578334361779" />
-    <state x="839" y="407" width="635" height="458" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1578294632033">
+    <state x="839" y="407" width="635" height="458" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579298679421">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="839" y="407" width="635" height="458" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578294632033" />
-    <state x="860" y="173" key="com.intellij.database.dbimport.ImportDialog" timestamp="1578287701669">
+    <state x="839" y="407" width="635" height="458" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579298679421" />
+    <state x="860" y="173" key="com.intellij.database.dbimport.ImportDialog" timestamp="1579297303460">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="860" y="173" key="com.intellij.database.dbimport.ImportDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578287701669" />
-    <state x="1010" y="323" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1578287677010">
+    <state x="860" y="173" key="com.intellij.database.dbimport.ImportDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579297303460" />
+    <state x="1010" y="323" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1579297260553">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1010" y="323" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578287677010" />
-    <state x="1059" y="339" width="441" height="364" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1578126260081">
+    <state x="1010" y="323" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579297260553" />
+    <state x="1059" y="339" width="441" height="356" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1579299106112">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1059" y="339" width="441" height="364" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578126260081" />
-    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1578614920478">
+    <state x="1059" y="339" width="441" height="356" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579299106112" />
+    <state x="985" y="135" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1579302258003">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="346" y="214" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578614920478" />
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1578613560525">
+    <state x="985" y="135" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579302258003" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1579320150794">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1578613560525" />
+    <state x="976" y="342" key="com.intellij.ide.util.TipDialog/0.0.2560.1040/-2560.-218.2560.1400@0.0.2560.1040" timestamp="1579320150794" />
     <state x="887" y="67" width="785" height="906" key="find.popup" timestamp="1578295062806">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>

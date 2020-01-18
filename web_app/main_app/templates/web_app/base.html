@@ -1,17 +1,18 @@
-{% load static %}
-
+{%load static%}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Index page</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+   <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+      <title>CSULB Classroom Finder</title>
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <link href="{%static 'style.css'%}" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <div id="background_image"></div>
+      <div id="background_logo"></div>
+      <div id="overlay"></div>
 
-    </head>
-
-    <body>
-        {% block content%} {% endblock %}
-
-
-
-     </body>
+        {% block content %}{% endblock %}
+      </body>
 </html>

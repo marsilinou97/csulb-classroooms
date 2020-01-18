@@ -1,0 +1,86 @@
+{% extends "web_app/base.html" %}
+{% block content %}
+   <div class="page_container">
+            <div class="wrap-contact100">
+               <form class="contact100-form validate-form" method="POST">
+                  {% csrf_token %}
+                  <span class="form-title">
+                  Find An Empty Classroom
+                  </span>
+                  <div id="room_count">
+                     <div class="input_field_wrapper">
+                        <label for="room_number">Room number</label>
+                        <input autocomplete="off" class="input_field" id="room_number" name="room_number"
+                           placeholder="Room #"
+                           type="text">
+                     </div>
+                     <div class="input_field_wrapper">
+                        <label for="buildings">Building</label>
+                        <select class="input_field" id="buildings" name="building" required>
+                           <option value="">Building</option>
+                           {% for b in buildings %}
+                           <option class="input_field" value="{{b.0}}">{{b.0}}</option>
+                           {% endfor %}
+                        </select>
+                     </div>
+                  </div>
+                  <div id="time">
+                     <div class="input_field_wrapper" id="from">
+                        <label for="start_time">Start time</label>
+                        <input autocomplete="off" class="input_field" id="start_time" name="start_time" placeholder="From"
+                           required type="time">
+                     </div>
+                     <div class="input_field_wrapper" id="to">
+                        <label for="end_time">End time</label>
+                        <input autocomplete="off" class="input_field" id="end_time" name="end_time" placeholder="To"
+                           required type="time">
+                     </div>
+                     <div class="input_field_wrapper">
+                        <label for="day">Day</label>
+                        <select class="input_field" id="day" name="day" required>
+                           <option disabled="" selected value="">Day</option>
+                           {% for day in days %}
+                           <option value="{{day}}">{{day}}</option>
+                           {% endfor %}
+                        </select>
+                     </div>
+                  </div>
+                  <button id="submit_button" onclick="submit" style="width: 50%;">Submit</button>
+               </form>
+               {% if message %}
+               <h2 class="error_message">{{message}}</h2>
+               {% endif %}
+               <section>
+               </section>
+            </div>
+         </div>
+         {% if results %}
+         <!-- Results table-->
+         {% include 'web_app/results_table.html' %}
+         {% endif %}
+
+         <script type="text/javascript">
+            $("#submit_button").click(function () {
+                //start time
+                let start_time = $("#start_time").val();
+
+                //end time
+                let end_time = $("#end_time").val();
+
+                //convert both time into timestamp
+                let stt = new Date("November 13, 2013 " + start_time);
+                stt = stt.getTime();
+
+                let endt = new Date("November 13, 2013 " + end_time);
+                endt = endt.getTime();
+
+                //by this you can see time stamp value in console via firebug
+                console.log("Time1: " + stt + " Time2: " + endt);
+
+                if (stt > endt) {
+                    alert("Start-time must be smaller then End-time.\nLeave time empty start time would be set to current time and end time is 30 minutes after!");
+                    return false;
+                }
+            });
+         </script>
+{% endblock content%}
