@@ -34,8 +34,8 @@ def handle_post_request(request, form):
         values['message'] += 'Time badly formatted, new start time is set to 8AM and end time is set to 8:30AM\n'
     else:
         # Validate time range (Deny any request after 12:00AM)
-        temp_start_time = values['start_time'].split(":")
-        temp_end_time = values['end_time'].split(":")
+        temp_start_time = [int(i) for i in values['start_time'].split(":")]
+        temp_end_time = [int(i) for i in values['end_time'].split(":")]
         # Verify that end time is greater than start time
         if current_datetime.replace(hour=temp_start_time[0], minute=temp_start_time[1]) > current_datetime.replace(hour=temp_end_time[0], minute=temp_end_time[1]):
             values['start_time'], values['start_time'] = values['start_time'], values['start_time']
@@ -50,13 +50,15 @@ def handle_post_request(request, form):
     # Validate day is a weekday
     if values['day'] not in WEEK_DAYS.values():
         # Set day to today's day if it's not a weekend
-        if WEEK_DAYS[current_datetime.strftime('%A')] not in ['St', 'Su']:
+        if WEEK_DAYS[current_datetime.strftime('%A')] not in ['Saturday', 'Sunday']:
             values['message'] += "Invalid day was given, setting day to Today instead!\n"
             values['day'] = WEEK_DAYS[current_datetime.strftime('%A')]
         # Set day to Monday if today is a weekend
         else:
             values['message'] += "Invalid day was given, setting day to Monday instead!\n"
             values['day'] = 'M'
+    else:
+        values['day'] = WEEK_DAYS[values['day']]
 
     # Handle empty room number
     if not values['room_number']:
