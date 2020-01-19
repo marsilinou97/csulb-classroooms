@@ -48,7 +48,7 @@ def handle_post_request(request, form):
             values['end_time'] = '08:30'
 
     # Validate day is a weekday
-    if values['day'] not in WEEK_DAYS.values():
+    if values['day'] not in WEEK_DAYS.keys():
         # Set day to today's day if it's not a weekend
         if WEEK_DAYS[current_datetime.strftime('%A')] not in ['Saturday', 'Sunday']:
             values['message'] += "Invalid day was given, setting day to Today instead!\n"
