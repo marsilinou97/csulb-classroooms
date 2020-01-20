@@ -24,7 +24,8 @@ def handle_post_request(request, form):
     values['room_number'] = form.cleaned_data['room_number']
     values['building'] = form.cleaned_data['building']
     values['message'] = ''
-
+    if values['room_number'] and values['room_number']:
+        pass
     # Validate start and end times
     pattern = re.compile(r'^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$')
     if not (pattern.match(values['start_time']) and pattern.match(values['end_time'])):

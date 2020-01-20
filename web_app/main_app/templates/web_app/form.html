@@ -15,7 +15,7 @@
                            type="text">
                      </div>
                      <div class="input_field_wrapper">
-                        <label for="buildings">Building</label>
+                        <label for="buildings">Building*</label>
                         <select class="input_field" id="buildings" name="building" required>
                            <option value="">Building</option>
                            {% for b in buildings %}
@@ -26,17 +26,17 @@
                   </div>
                   <div id="time">
                      <div class="input_field_wrapper" id="from">
-                        <label for="start_time">Start time</label>
+                        <label for="start_time">Start time*</label>
                         <input autocomplete="off" class="input_field" id="start_time" name="start_time" placeholder="From"
                            required type="time">
                      </div>
                      <div class="input_field_wrapper" id="to">
-                        <label for="end_time">End time</label>
+                        <label for="end_time">End time*</label>
                         <input autocomplete="off" class="input_field" id="end_time" name="end_time" placeholder="To"
                            required type="time">
                      </div>
                      <div class="input_field_wrapper">
-                        <label for="day">Day</label>
+                        <label for="day">Day*</label>
                         <select class="input_field" id="day" name="day" required>
                            <option disabled="" selected value="">Day</option>
                            {% for day in days %}

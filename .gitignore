@@ -1,9 +1,10 @@
-.idea
+.idea/
 refrences
 pyvenv.cfg
 web_app/main_app/__pycache__/
 *.pyc
 *.xml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -133,3 +134,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+*.xml
+*.xml
+*.xml
+*.meta
