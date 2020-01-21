@@ -39,23 +39,24 @@ class database_access_object(object):
                 ''')
         return self.execute_query(query, parameters)
 
-    def get_specific_room(self, room_number, building):
-        parameters = dict(room_number=room_number, building=building)
+    def get_specific_room(self, room_number, building, day):
+        parameters = dict(room_number=room_number, building=building, day=day)
         query = """
-                SELECT START_TIME || ' - ' || END_TIME
-                FROM (
-                         SELECT '06:00:00'::TIME START_TIME, min(START_TIME) END_TIME
-                         FROM MAIN_APP_CLASSESINFO
-                         WHERE ROOM_NUM = 71
-                         UNION ALL
-                         SELECT END_TIME, lead(START_TIME) OVER (ORDER BY START_TIME)
-                         FROM MAIN_APP_CLASSESINFO
-                         WHERE ROOM_NUM = 71
-                         UNION ALL
-                         SELECT max(END_TIME), '23:59:59'::TIME
-                         FROM MAIN_APP_CLASSESINFO
-                         WHERE ROOM_NUM = 71
-                     ) T
-                WHERE START_TIME <> END_TIME;
+                    SELECT  to_char(start_time, 'HH12:MI PM') || ' - ' || to_char(END_TIME, 'HH12:MI PM')
+                    FROM (
+                             SELECT '06:00:00'::TIME START_TIME, min(START_TIME) END_TIME
+                             FROM MAIN_APP_CLASSESINFO ci
+                             WHERE  ROOM_NUM = (SELECT s.id from MAIN_APP_CLASSROOMS s WHERE s.ROOM_NUM =  %(room_number)s and s.BUILDING =  %(building)s) and CLASS_DAYS=%(day)s
+                             UNION ALL
+                             SELECT END_TIME, lead(START_TIME) OVER (ORDER BY START_TIME)
+                             FROM MAIN_APP_CLASSESINFO
+                             WHERE ROOM_NUM = (SELECT s.id from MAIN_APP_CLASSROOMS s WHERE s.ROOM_NUM =  %(room_number)s and s.BUILDING =  %(building)s)  and CLASS_DAYS=%(day)s
+                             UNION ALL
+                             SELECT max(END_TIME), '23:59:59'::TIME
+                             FROM MAIN_APP_CLASSESINFO
+                             WHERE ROOM_NUM = (SELECT s.id from MAIN_APP_CLASSROOMS s WHERE s.ROOM_NUM =  %(room_number)s and s.BUILDING =  %(building)s) and CLASS_DAYS=%(day)s
+                         ) T
+                    WHERE START_TIME <> END_TIME  AND END_TIME - START_TIME > '00:15'::TIME;
                 """
-        self.execute_query(query, parameters)
+
+        return self.execute_query(query, parameters)

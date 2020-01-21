@@ -24,8 +24,28 @@ def handle_post_request(request, form):
     values['room_number'] = form.cleaned_data['room_number']
     values['building'] = form.cleaned_data['building']
     values['message'] = ''
-    if values['room_number'] and values['room_number']:
-        pass
+
+
+    #################################################################################################################
+    # Todo: break down things into functions
+    single_class = True
+    for k, v in values.items():
+        if k not in ['room_number', 'building', 'day'] and v:
+            single_class = False
+            break
+    if single_class:
+        results = connector.get_specific_room(room_number=values['room_number'], building=values['building'], day=WEEK_DAYS[values['day']])
+        render(request, 'web_app/results_table.html', {'schedule': results})
+        return render(request, 'web_app/form.html', {
+            'schedule': results,
+            'buildings': BUILDINGS,
+            'resultsCount': len(results),
+            'days': WEEK_DAYS,
+            'building': BUILDINGS,
+            'results': True})
+    #################################################################################################################
+
+
     # Validate start and end times
     pattern = re.compile(r'^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$')
     if not (pattern.match(values['start_time']) and pattern.match(values['end_time'])):
@@ -84,11 +104,13 @@ def handle_post_request(request, form):
 
 def handle_get_request(request, message=None):
     global WEEK_DAYS, BUILDINGS
+    render(request, 'web_app/popup.html')
     return render(request, 'web_app/form.html',
                   {
                       'buildings': BUILDINGS,
                       'days': WEEK_DAYS,
-                      'message': message
+                      'message': message,
+                      'show_popup': True
                   })
 
 

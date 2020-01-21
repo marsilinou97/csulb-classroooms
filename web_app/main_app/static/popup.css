@@ -1,0 +1,138 @@
+div#ex1 {
+    height: 515px;
+    font-size: 24pt;
+    text-align: center;
+    width: 750px;
+    opacity: 1;
+    position: relative;
+}
+
+a.button {
+    position: static;
+    border: 3px black solid;
+    padding: 2%;
+    /*margin-top: 2vh;*/
+    background-color: rgba(248, 161, 25, 1.0);
+    display: block;
+    width: 230px;
+    margin: 13px auto -11px auto;
+}
+
+
+.blocker {
+    background-color: unset;
+    z-index: 99999999999999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+div#ex1 {
+    background: rgba(255, 255, 255, .85);
+    color: black;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+
+.blocker {
+    background-color: unset;
+    z-index: 99999999999999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+div#ex1 {
+    /*background: rgba(200, 124, 89, 0.85);*/
+    background: rgba(255, 255, 255, 0.85);
+    color: yellow;
+    font-style: italic;
+    /*font-family: cursive;*/
+    font-weight: 600;
+    color: black;
+}
+
+
+span.option {
+    text-decoration: underline;
+    font-size: 19pt;
+    text-align: center;
+    margin: 2.5vh 0;
+    display: block;
+    /*color: black;*/
+}
+
+/*h3{color: black;}*/
+
+p {
+    text-align: left;
+    font-size: 19pt;
+    font-weight: normal;
+    font-family: inherit;
+    /*color: black;*/
+}
+
+h3 {
+    font-size: 23pt;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+a.button {
+    text-decoration: none;
+    color: white;
+}
+
+.modal {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    div#ex1 {
+        width: 80%;
+        font-size: 19px;
+    }
+
+    h3 {
+
+        font-size: 14pt;
+
+
+        font-family: monospace;
+        /* text-decoration: underline; */
+        text-shadow: 3px 3px grey;
+    }
+
+    p {
+        text-align: left;
+        font-size: 15pt;
+        font-weight: normal;
+        font-family: sans-serif;
+        /*color: black;*/
+    }
+
+    span.option {
+        text-decoration: underline;
+        font-size: 13pt;
+        text-align: center;
+        margin: 13px 0;
+        display: block;
+        font-family: normal;
+        /*color: black;*/
+    }
+
+}
+
+
+input.test {
+    font-size: 10pt;
+}
+
+label.test {
+    font-size: 15px;
+    font-family: inherit;
+    text-align: center;
+    margin: 0 auto;
+    display: contents;
+}

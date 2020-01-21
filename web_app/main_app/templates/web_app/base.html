@@ -1,18 +1,33 @@
 {%load static%}
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-      <title>CSULB Classroom Finder</title>
-      <meta content="width=device-width, initial-scale=1" name="viewport">
-      <link href="{%static 'style.css'%}" rel="stylesheet" type="text/css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   </head>
-   <body>
-      <div id="background_image"></div>
-      <div id="background_logo"></div>
-      <div id="overlay"></div>
+<head>
+   <title>CSULB Classroom Finder</title>
+   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-        {% block content %}{% endblock %}
-      </body>
+   <!-- jQuery Modal -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" rel="stylesheet"/>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <!--End Jquery Modal -->
+   <meta content="width=device-width, initial-scale=1" name="viewport">
+   <link href="{%static 'style.css'%}" rel="stylesheet" type="text/css">
+   <link href="{%static 'popup.css'%}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+{% if show_popup %}
+   {% include "web_app/popup.html" %}
+{%endif%}
+<div id="background_image"></div>
+<div id="background_logo"></div>
+<div id="overlay"></div>
+
+{% block content %}{% endblock %}
+
+
+
+</body>
+
 </html>
