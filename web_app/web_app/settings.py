@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_gb)hnabp0ss9cisy%2+xckgmjdzxz-@w+plc-aa2+hzp=$((-'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1', '*']
 
@@ -124,3 +124,6 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+# CSRF error view
+CSRF_FAILURE_VIEW = 'main_app.views.csrf_failure'

@@ -1,22 +1,26 @@
-{% if schedule %}
-    <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Room</th>
-        </tr>
-        </thead>
-        <tbody>
+<div id="results" onload="">
+<!--    {% if  message %}-->
+<!--        <h2 class="message">{{message}}</h2>-->
+<!--        {% endif %}-->
+        {% if schedule %}
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Result</th>
+            </tr>
+            </thead>
+            <tbody>
 
-        {% for x in schedule %}
-        <tr>
-            <th scope="row">{{ forloop.counter }}</th>
-            <th> {{ x.0 }}</th>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-{% else %}
-    <h2 class="no_results">Unfortunately there is no results to your search :/</h2>
-{% endif %}
-
+            {% for x in schedule %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <th> {{ x.0 }}</th>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+      <h2 class="no_results">Unfortunately there is no results to your search :/</h2>
+    {% endif %}
+</div>

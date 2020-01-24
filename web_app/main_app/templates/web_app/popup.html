@@ -1,20 +1,32 @@
-    <div class="modal" id="ex1" style="'max-width:100%;">
-        <h3>LOOKING FOR AN EMPTY ROOM TO STUDY?</h3>
-        <span class="option">Option 1:</span>
-        <p style="">Enter room number, building and day to find when this room is available.</p>
-        <span class="option">Option 2:</span>
-        <p style="">Leave room empty and fill in building, day, and times to find available rooms.</p>
-        <a class="button" href="#" rel="modal:close">Get started</a>
-        <label class="test"><input type="checkbox" class="">I get it, don't show again.</label>
-    </div>
+<div class="modal" id="ex1" style="'max-width:100%;">
+    <h3>LOOKING FOR AN EMPTY ROOM TO STUDY?</h3>
+    <span class="option">Option 1:</span>
+    <p style="">Enter room number, building and day to find when this room is available.</p>
+    <span class="option">Option 2:</span>
+    <p style="">Leave room empty and fill in building, day, and times to find available rooms.</p>
+    <a class="button" href="#" onclick="check_alert_status()" rel="modal:close">Get started</a>
+    <label class="test"><input class="" type="checkbox">I get it, don't show again.</label>
+</div>
 
-    <!-- Link to open the modal -->
-    <p><a href="#ex1" id="alerter" rel="modal:open" style="display: none;"></a></p>
+<!-- Link to open the modal -->
+<p><a href="#ex1" id="alerter" rel="modal:open" style="display: none;"></a></p>
 
-    <script type="text/javascript">
-        var alerted = localStorage.getItem('alerted') || '';
-        if (alerted < 1111) {
-            document.getElementById("alerter").click()
-            localStorage.setItem('alerted', alerted += 1);
+<script type="text/javascript">
+    let alert_status = localStorage.getItem('alert_status') || 'false';
+    console.log(alert_status)
+    console.log(document.querySelector('.test input').checked)
+    if (alert_status == 'false') {
+        document.getElementById("alerter").click();
+    }
+
+    function check_alert_status() {
+        if (alert_status == 'false') {
+            if (document.querySelector('.test input').checked) {
+                localStorage.setItem('alert_status', 'true');
+            } else {
+                localStorage.setItem('alert_status', 'false');
+            }
+            document.getElementById("alerter").click();
         }
-    </script>
+    }
+</script>

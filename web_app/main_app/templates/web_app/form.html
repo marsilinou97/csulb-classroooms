@@ -11,7 +11,7 @@
                 <div class="input_field_wrapper">
                     <label for="room_number">Room number</label>
                     <input autocomplete="off" class="input_field" id="room_number" name="room_number"
-                           onkeyup="disableField(this.value)"
+                           onkeyup="disableField(this.value, this.id)"
                            placeholder="Room #" type="text">
                 </div>
                 <div class="input_field_wrapper">
@@ -26,37 +26,43 @@
             </div>
             <div id="time">
                 <div class="input_field_wrapper" id="from">
-                    <label for="start_time">Start time*</label>
-                    <input autocomplete="off" class="input_field" id="start_time" name="start_time" placeholder="From"
-                           type="time">
+                    <label for="start_time">Start time</label>
+                    <input autocomplete="off" class="input_field" id="start_time" name="start_time"
+                           onkeyup=""
+                           placeholder="From" type="time">
                 </div>
                 <div class="input_field_wrapper" id="to">
-                    <label for="end_time">End time*</label>
-                    <input autocomplete="off" class="input_field" id="end_time" name="end_time" placeholder="To"
-                           type="time">
+                    <label for="end_time">End time</label>
+                    <input autocomplete="off" class="input_field" id="end_time" name="end_time"
+                           onkeyup=""
+                           placeholder="To" type="time">
                 </div>
-                <div class="input_field_wrapper">
-                    <label for="day">Day*</label>
-                    <select class="input_field" id="day" name="day">
-                        <option disabled="" selected value="">Day</option>
-                        {% for day in days %}
-                        <option value="{{day}}">{{day}}</option>
-                        {% endfor %}
-                    </select>
-                </div>
+            </div>
+            <div class="input_field_wrapper">
+                <label for="day">Day*</label>
+                <select class="input_field" id="day" name="day">
+                    <option disabled="" selected value="">Day</option>
+                    {% for day in days %}
+                    <option value="{{day}}">{{day}}</option>
+                    {% endfor %}
+                </select>
             </div>
             <button id="submit_button" onclick="submit" style="width: 50%;">Submit</button>
         </form>
-        {% if message %}
-        <h2 class="error_message">{{message}}</h2>
-        {% endif %}
-        <section>
-        </section>
+
     </div>
+    {% if  message %}
+    <h2 class="message">{{message|safe}}</h2>
+    {% endif %}
 </div>
 {% if results %}
-<!-- Results table-->
-{% include 'web_app/results_table.html' %}
+    <!-- Results table-->
+    {% include 'web_app/results_table.html' %}
+        <script>
+            // window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: "smooth"});
+            // window.scrollTo({left: 0, top: '80vh', behavior: "smooth"});
+            window.scrollBy({left: 0, top: 0.5 * window.innerHeight, behavior: "smooth"});
+        </script>
 {% endif %}
 
 <script type="text/javascript">
@@ -86,41 +92,69 @@
 
 
 <script type="text/javascript">
+    function disableField(val, element_id) {
+        if (element_id == 'room_number') {
 
-    function disableField(val) {
-        if (this.id = 'room_number') {
-            var start_time = document.getElementById("start_time");
-            var end_time = document.getElementById("end_time");
+            let time_fields = document.querySelectorAll("#time input");
+            let time_label = document.querySelectorAll("#time");
 
             if (val.length > 0) {
-                start_time.disabled = true;
-                end_time.disabled = true;
-                start_time.classList.add("input_gray");
-                end_time.classList.add("input_gray");
+                time_fields[0].value = '';
+                time_fields[1].value = '';
+
+                time_fields[0].disabled = true;
+                time_fields[1].disabled = true;
+
+                time_fields[0].classList.add("gray_bg", "gray_text");
+                time_fields[1].classList.add("gray_bg", "gray_text");
+
+                time_label[0].classList.add("gray_text");
+                time_label[1].classList.add("gray_text");
+
             } else {
-                start_time.classList.remove("input_gray");
-                end_time.classList.remove("input_gray");
-                end_time.disabled = false;
-                start_time.disabled = false;
+                time_fields[0].value = '';
+                time_fields[1].value = '';
+
+                time_fields[0].disabled = false;
+                time_fields[1].disabled = false;
+
+                time_fields[0].classList.remove("gray_bg", "gray_text");
+                time_fields[1].classList.remove("gray_bg", "gray_text");
+                time_label[0].classList.remove("gray_text");
+                time_label[1].classList.remove("gray_text");
+
             }
         }
-        // else if (this.id in ['start_time', 'end_time']) {
-        //     var room_number = document.getElementById("room_number");
-        //     if (val.length > 0) {
-        //         room_number.disabled = true;
-        //         room_number.classList.add("input_gray");
-        //     } else {
-        //         room_number.classList.remove("input_gray");
-        //         room_number.disabled = false;
-        //     }
-        // }
-
     }
 
-</script>
-<script>
-    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
 
+    // window.onload = function time_value_change() {
+
+    let time_fields = document.querySelectorAll("#time input");
+    let room_number_field = document.querySelector("#room_number");
+    let room_number_label = document.querySelectorAll("#room_count label")[0];
+
+    /* event listener */
+    time_fields[0].addEventListener('change', change_detected);
+
+    time_fields[1].addEventListener('change', change_detected);
+
+    function change_detected(val) {
+        if (time_fields[0].value || time_fields[1].value) {
+            room_number_field.value = '';
+            room_number_field.disabled = true;
+            room_number_field.classList.add("gray_bg", "gray_text");
+            room_number_label.classList.add("gray_text");
+        } else {
+            room_number_field.value = '';
+            room_number_field.disabled = false;
+            room_number_field.classList.remove("gray_bg", "gray_text");
+            room_number_label.classList.remove("gray_text");
+        }
+
+        // }
+    }
 </script>
+
 
 {% endblock content%}
