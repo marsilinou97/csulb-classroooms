@@ -48,7 +48,8 @@ button {
     margin: 0 auto;
     outline: none;
     border: none;
-    background-color: #EBA91B;
+    background-color: #bf8a19;
+    font-size: 100%;
 }
 
 form {
@@ -71,13 +72,29 @@ form {
     overflow: hidden;
     position: fixed;
     /*background-image: url("https://www.logolynx.com/images/logolynx/0c/0c23f35a7edaf493e331dc9900d7741e.png");*/
-    background-image: url("logo_60.png");
+    background-image: url("../img/logo-tiny.webp");
     background-position: center;
     opacity: 0.4;
     background-size: contain;
     background-repeat: no-repeat;
     top: 5%;
     z-index: -1;
+}
+
+#background_image {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    background-image: url("../img/bg.webp");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    z-index: -2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -255,10 +272,11 @@ label {
     width: 50%;
     line-height: 55px;
     font-size: 18pt;
+    color: #EBA91B;
 }
 
 table.table {
-    width: 80%;
+    width: 100%;
     margin: 0 auto 75px auto;
     border: 2px black dashed;
 }
@@ -283,6 +301,7 @@ tbody tr:nth-child(even) {
     display: block;
     margin: 0 auto;
     text-align: left;
+    margin: 2% 4% 0 auto;
 
 }
 
@@ -290,23 +309,6 @@ tbody tr:nth-child(even) {
 .no_results {
     color: rgba(255, 180, 120, 0.75);
     font-size: 28pt;
-}
-
-
-#background_image {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    background-image: url("bg_70_4_80_1_70.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    z-index: -2;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .gray_text {
@@ -346,5 +348,11 @@ tbody tr:nth-child(even) {
         font-size: 14pt;
         width: 75%;
         margin: auto;
+    }
+
+    th {
+        text-align: center;
+        width: 10px;
+        height: 35px;
     }
 }

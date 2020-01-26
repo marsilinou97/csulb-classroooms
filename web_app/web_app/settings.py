@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'main_app.middleware.MyMiddleware',
 ]
 
 ROOT_URLCONF = 'web_app.urls'
@@ -69,6 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'web_app.wsgi.application'
+# WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database

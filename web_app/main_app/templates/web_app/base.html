@@ -1,31 +1,33 @@
 {%load static%}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>CSULB Classroom Finder</title>
-   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>CSULB Classroom Finder</title>
 
-   <!-- jQuery Modal -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" rel="stylesheet"/>
-   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-   <!--End Jquery Modal -->
-   <meta content="width=device-width, initial-scale=1" name="viewport">
-   <link href="{%static 'style.css'%}" rel="stylesheet" type="text/css">
-   <link href="{%static 'popup.css'%}" rel="stylesheet" type="text/css">
+    <!--  Disallow logging!  -->
+    <script async>console.log = function () {}</script>
+    <!-- jQuery Modal -->
+    <script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link async href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" rel="stylesheet"/>
+    <!--End Jquery Modal -->
+    <link async href="{%static 'css/style.css'%}" rel="stylesheet" type="text/css">
+    <link async href="{%static 'css/popup.css'%}" rel="stylesheet" type="text/css">
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="CSSULB class finder allows you to find empty classrooms at california state university long beach " name="Description">
 
 </head>
 <body>
 {% if show_popup %}
-   {% include "web_app/popup.html" %}
+{% include "web_app/popup.html" %}
 {%endif%}
 <div id="background_image"></div>
 <div id="background_logo"></div>
 <div id="overlay"></div>
 
 {% block content %}{% endblock %}
-
 
 
 </body>

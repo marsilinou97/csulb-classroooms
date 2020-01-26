@@ -1,7 +1,7 @@
-from datetime import datetime, timedelta
+import re
+from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render
-import re
 from . import DAO
 from .forms import QueryForm
 
@@ -19,7 +19,7 @@ def validate_day(day):
     # Validate day is a weekday
     if day not in WEEK_DAYS.keys():
         # Set day to today's day if it's not a weekend
-        if WEEK_DAYS[CURRENT_DATETIME.strftime('%A')] not in ['Saturday', 'Sunday']:
+        if CURRENT_DATETIME.strftime('%A') not in ['Saturday', 'Sunday']:
             message = "- Invalid day was given, setting day to Today instead!"
             day = WEEK_DAYS[CURRENT_DATETIME.strftime('%A')]
         # Set day to Monday if today is a weekend
@@ -123,14 +123,14 @@ def handle_post_request(request, form):
     values = get_form_dictionary(form)
     if values['room_number'] and values['building']:
         return option_one(request, values)
-    elif TEMP := True:
+    # TODO:
+    elif True:
         return option_two(request, values)
     else:
         pass
 
 
 def handle_get_request(request, message=None):
-    global WEEK_DAYS, BUILDINGS
     render(request, 'web_app/popup.html')
     return render(request, 'web_app/form.html',
                   {
@@ -158,8 +158,8 @@ def index(request):
 
 
 def feedback(request):
-    return render(request, 'web_app/feedback.html')
     # TODO: Build feedback page
+    return render(request, 'web_app/feedback.html')
 
 
 def csrf_failure(request, reason=""):

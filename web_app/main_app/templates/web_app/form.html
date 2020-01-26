@@ -16,7 +16,7 @@
                 </div>
                 <div class="input_field_wrapper">
                     <label for="buildings">Building*</label>
-                    <select class="input_field" id="buildings" name="building">
+                    <select class="input_field" id="buildings" name="building" required>
                         <option value="">Building</option>
                         {% for b in buildings %}
                         <option class="input_field" value="{{b.0}}">{{b.0}}</option>
@@ -40,7 +40,7 @@
             </div>
             <div class="input_field_wrapper">
                 <label for="day">Day*</label>
-                <select class="input_field" id="day" name="day">
+                <select class="input_field" id="day" name="day" required>
                     <option disabled="" selected value="">Day</option>
                     {% for day in days %}
                     <option value="{{day}}">{{day}}</option>
@@ -51,18 +51,18 @@
         </form>
 
     </div>
-    {% if  message %}
+    {% if message %}
     <h2 class="message">{{message|safe}}</h2>
     {% endif %}
 </div>
 {% if results %}
-    <!-- Results table-->
-    {% include 'web_app/results_table.html' %}
-        <script>
-            // window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: "smooth"});
-            // window.scrollTo({left: 0, top: '80vh', behavior: "smooth"});
-            window.scrollBy({left: 0, top: 0.5 * window.innerHeight, behavior: "smooth"});
-        </script>
+<!-- Results table-->
+{% include 'web_app/results_table.html' %}
+<script>
+    // window.scrollTo({left: 0, top: document.body.scrollHeight, behavior: "smooth"});
+    // window.scrollTo({left: 0, top: '80vh', behavior: "smooth"});
+    window.scrollBy({left: 0, top: 0.5 * window.innerHeight, behavior: "smooth"});
+</script>
 {% endif %}
 
 <script type="text/javascript">
@@ -154,7 +154,15 @@
 
         // }
     }
+
+
+    //Select today
+    let d = new Date();
+    let days = ['Monday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Monday'];
+    document.getElementById("day").value = days[d.getDay()];
 </script>
 
 
 {% endblock content%}
+
+
