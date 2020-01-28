@@ -72,7 +72,7 @@ form {
     overflow: hidden;
     position: fixed;
     /*background-image: url("https://www.logolynx.com/images/logolynx/0c/0c23f35a7edaf493e331dc9900d7741e.png");*/
-    background-image: url("../img/logo-tiny.webp");
+    background-image: url("../img/logo-tiny.png");
     background-position: center;
     opacity: 0.4;
     background-size: contain;
@@ -88,7 +88,7 @@ form {
     width: 100%;
     overflow: hidden;
     position: fixed;
-    background-image: url("../img/bg.webp");
+    background-image: url("../img/bg.jpg");
     -moz-background-size: cover;
     -o-background-size: cover;
     z-index: -2;
@@ -354,5 +354,9 @@ tbody tr:nth-child(even) {
         text-align: center;
         width: 10px;
         height: 35px;
+    }
+
+    .input_field {
+        width: 75%
     }
 }
