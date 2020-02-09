@@ -64,7 +64,7 @@ class connector:
         try:
             if not connector.cursor:
                 connector.make_connection()
-            query = "INSERT INTO MAIN_APP_CLASSESINFO (class_number, class_days, start_time, end_time, class_comments, instructor, building, room_num, class_type, course_title) VALUES"
+            query = "INSERT INTO MAIN_APP_CLASSESINFO (class_number, class_days, start_time, end_time, class_comments, instructor, room_num, class_type, course_title) VALUES"
             for x in os.listdir('sql_queries'):
                 with open(f"sql_queries/{x}") as f:
                     query += f.read()

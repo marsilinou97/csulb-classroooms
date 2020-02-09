@@ -1,1 +1,1 @@
-( '10956', 'TuTh', '14:00:00', '15:15:00', '', 'Arevalo S', NULL, '473', 'LEC', 'HEALTH DISPARITIES'),( '11346', 'MW', '11:00:00', '12:15:00', 'Class offered with ENGR-361-01', 'Ayala P', NULL, '340', 'SEM', 'SCIENTIFIC RESEARCH COMMUNICAT'),
+( '8337', 'MW', '08:00:00', '09:15:00', '', 'Arevalo S', '849', 'LEC', 'HEALTH DISPARITIES'),( '8639', 'TuTh', '08:00:00', '09:15:00', '', 'Manandhar S', '842', 'LEC', 'INTRODUCTION TO BIOMEDICAL RES'),

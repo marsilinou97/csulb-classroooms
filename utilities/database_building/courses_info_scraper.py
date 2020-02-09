@@ -5,10 +5,14 @@ import datetime
 from helper_methods import connector as con
 import sys, os
 from threading import Lock
+
 insert_room_lock = Lock()
+
 THREADS = 25
 con.make_connection()
 session = HTMLSession()
+
+SEMESTER = "Spring_2020"
 
 
 def parse_time(text):
@@ -33,7 +37,7 @@ def parse_time(text):
 
 def parse_interval(text):
     if 'TBA' in text:
-        return None, None
+        return 'NULL', 'NULL'
 
     start, end = text.split('-')
 
@@ -74,7 +78,7 @@ def parse_build_room(br):
 
 
 def subject_parser(subject):
-    subject_url = f"http://web.csulb.edu/depts/enrollment/registration/class_schedule/Fall_2018/By_Subject/{subject}"
+    subject_url = f"http://web.csulb.edu/depts/enrollment/registration/class_schedule/{SEMESTER}/By_Subject/{subject}"
     query = ""
     empty = True
     try:
@@ -89,7 +93,10 @@ def subject_parser(subject):
                 class_info = [x.replace("'", "''") for x in class_info]
                 start_time, end_time = parse_interval(class_info[6])
                 room_id = parse_build_room(class_info[8])
-                query += f"( '{class_info[0]}', '{class_info[5]}', '{start_time}', '{end_time}', '{class_info[10]}', '{class_info[9]}', NULL, '{room_id}', '{class_info[4]}', '{title}'),"
+                if start_time == "NULL":
+                    query += f"( '{class_info[0]}', '{class_info[5]}', NULL, NULL, '{class_info[10]}', '{class_info[9]}', '{room_id}', '{class_info[4]}', '{title}'),"
+                else:
+                    query += f"( '{class_info[0]}', '{class_info[5]}', '{start_time}', '{end_time}', '{class_info[10]}', '{class_info[9]}', '{room_id}', '{class_info[4]}', '{title}'),"
                 empty = False
         if not empty:
             with open(f"sql_queries/{subject.split('.')[0]}.sql", "w") as f:
@@ -102,12 +109,12 @@ def subject_parser(subject):
 
 
 def main():
-    semester = "Fall_2019"
     try:
         con.make_connection()
+        con.get_rooms()
         # Find all subjects' links
         resp = session.get(
-            f"http://web.csulb.edu/depts/enrollment/registration/class_schedule/{semester}/By_Subject/").html
+            f"http://web.csulb.edu/depts/enrollment/registration/class_schedule/{SEMESTER}/By_Subject/").html
         subjects = [list(subject.find('a', first=True).links)[0] for subject in resp.find("#pageContent li")]
         start = time.time()
         with cf.ThreadPoolExecutor(THREADS) as ex:

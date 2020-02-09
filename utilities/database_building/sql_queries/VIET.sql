@@ -1,1 +1,1 @@
-( '3496', 'MW', '17:00:00', '18:50:00', '', 'Bui C', NULL, '131', 'LEC', 'ACCEL VIET HERITAGE STUDENTS'),
+( '3332', 'MW', '17:00:00', '18:50:00', '', 'Bui C', '642', 'LEC', 'ACCEL VIET HERITAGE STUDENTS'),

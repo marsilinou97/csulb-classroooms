@@ -6,7 +6,7 @@ from . import DAO
 from .forms import QueryForm
 
 # Set global variables
-CONNECTOR = DAO.database_access_object()
+CONNECTOR = DAO.DatabaseAccessObject()
 global BUILDINGS, TIME_PATTERN
 BUILDINGS = CONNECTOR.get_buildings()
 WEEK_DAYS = {'Monday': 'M', 'Tuesday': 'Tu', 'Wednesday': 'W', 'Thursday': 'Th', 'Friday': 'F'}
@@ -48,7 +48,7 @@ def validate_time(start_time, end_time):
             start_time, end_time = end_time, start_time
             message += "- Start time can't be greater than end time, times are swapped!<br>"
         # End time must be before 12AM
-        if int(temp_end_time[0]) < 6:
+        if int(temp_end_time[0]) < 6 or int(temp_start_time[0]) >= 1:
             message += "- End time must be before 12AM, " \
                        "new start time is set to 8AM and end time is set to 8:30AM!<br>"
             start_time = '08:00'
@@ -119,7 +119,7 @@ def option_two(request, values):
 
 
 def handle_post_request(request, form):
-    # Set get form values
+    # Get form values
     values = get_form_dictionary(form)
     if values['room_number'] and values['building']:
         return option_one(request, values)
@@ -127,7 +127,7 @@ def handle_post_request(request, form):
     elif True:
         return option_two(request, values)
     else:
-        pass
+        return HttpResponse('<h1>Error!</h1>')
 
 
 def handle_get_request(request, message=None):
