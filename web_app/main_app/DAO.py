@@ -30,7 +30,7 @@ class DatabaseAccessObject(object):
                                     (SELECT NULL
                                      FROM MAIN_APP_CLASSESINFO C2
                                      WHERE C2.ROOM_NUM = R.ID
-                                       AND C2.START_TIME  > %(start_time)s :: TIME
+                                       AND C2.END_TIME  > %(start_time)s :: TIME
                                        AND C2.START_TIME  < %(end_time)s :: TIME
                                        AND R.ROOM_NUM LIKE %(room_number)s)
                                   AND CLASS_DAYS LIKE %(day)s

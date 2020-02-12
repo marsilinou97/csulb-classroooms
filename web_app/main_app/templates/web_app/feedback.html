@@ -2,6 +2,16 @@
 
 
 {%block content%}
-    <h1>Feedback page template...</h1>
-    <a href="{%url 'app_home'%}">Index page</a>
+<div class="page_container">
+    <div class="wrap-contact100">
+        <span class="form-title">💡 Feedback 💡</span>
+
+        <!--    <a href="{%url 'app_home'%}">Index page</a>-->
+        <form class="contact100-form validate-form" method="POST">
+            <textarea class="input_field feedback_field hide-native-scrollbar" maxlength="500"
+                      placeholder="Your feedback is greatly appreciated and helps me to improve :)"></textarea>
+            <button id="submit_button" onclick="submit" style="width: 50%;">Submit</button>
+        </form>
+    </div>
+</div>
 {% endblock content%}

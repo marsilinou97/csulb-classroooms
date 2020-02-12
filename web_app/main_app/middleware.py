@@ -1,4 +1,4 @@
-class MyMiddleware:
+class HeadersMiddle:
 
     def __init__(self, get_response):
         self.get_response = get_response
@@ -10,5 +10,8 @@ class MyMiddleware:
         response['X-Frame-Options'] = "DENY"
         response['X-Xss-Protection'] = "1; mode=block;"
         response['X-Content-Type-Options'] = "nosniff"
+        response['Cache-Control'] = "max-age=86400"
+        response["Strict-Transport-Securit"] = "max-age=86400; includeSubDomains"
         return response
+
 

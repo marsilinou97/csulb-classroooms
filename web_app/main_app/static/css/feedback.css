@@ -1,0 +1,19 @@
+textarea.feedback_field {
+    height: 20vh;
+    width: 100%;
+    color: black;
+    font-size: 37pt;
+    resize: none;
+}
+
+.hide-native-scrollbar {
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+.hide-native-scrollbar::-webkit-scrollbar { /** WebKit */
+  display: none;
+}
+
+.form-title{
+    font-size: 45pt;
+}
