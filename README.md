@@ -7,8 +7,8 @@ __***Brief description of the program:***__
 
 __***TODO:***__
 - **Clean up the code** (as this is a temporary branch and doesn't have the final code)
-- Add hitcounter 
-- ~~Host the website on Ubuntu server and use nginx as a web server. Replace~~ DDNS with DNS domain
+- ~~Add hitcounter~~
+- ~~Host the website on Ubuntu server and use nginx as a web server. Replace DDNS with DNS domain~~
 - Add all possible locations available for students to study and get help such as tutoring and student support locations. 
 - Integrate the scraper with an admin panel to update the database every semester
 - Add user feedback page 
